@@ -14,7 +14,7 @@ namespace SAF.Contabilidad.Form
     {
 
         //Pruebas lis
-
+        //edito lis gomezl
 
         #region <Variables>
         Int32[] Celdas = new Int32[] { 0, 15, 16, 17, 18, 19, 20 };
