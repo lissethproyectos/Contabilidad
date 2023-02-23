@@ -113,10 +113,6 @@ namespace SAF.Contabilidad.Form
                 ObjPoliza.Mes_anio = ddlMes.SelectedValue + SesionUsu.Usu_Ejercicio.Substring(2);
                 
                 CNPoliza.PolizasCjaConsultaGrid(ObjPoliza, ddlTipo.SelectedValue,  ref List);
-                // if (SesionUsu.Usu_Rep == "DEPTOFIN")
-                //    ObjPoliza.Centro_contable = "72104";
-                //else if (SesionUsu.Usu_Rep == "CJGRAL")
-                //    ObjPoliza.Centro_contable = "72103";
 
                 return List;
             }
