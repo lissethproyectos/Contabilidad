@@ -12,6 +12,10 @@ namespace SAF.Contabilidad.Form
 {
     public partial class frmGenPolizas : System.Web.UI.Page
     {
+
+        //Pruebas lis
+
+
         #region <Variables>
         Int32[] Celdas = new Int32[] { 0, 15, 16, 17, 18, 19, 20 };
         string Verificador = string.Empty;
@@ -26,18 +30,6 @@ namespace SAF.Contabilidad.Form
             SesionUsu = (Sesion)Session["Usuario"];
             if (!IsPostBack)            
                 Inicializar();
-
-
-            //    if (Request.QueryString["P_Tipo"] != null)
-            //    SesionUsu.Usu_Rep = Request.QueryString["P_Tipo"];
-            //else
-            //    SesionUsu.Usu_Rep = string.Empty;
-
-            //if (SesionUsu.Usu_Rep == "CJGRAL")
-            //    lblTitulo.Text = "Pólizas de Caja General";
-            //else if(SesionUsu.Usu_Rep == "DEPTOFIN")
-            //    lblTitulo.Text = "Pólizas de Finánzas";
-        
 
             ScriptManager.RegisterStartupScript(this, GetType(), "GridPolizas", "Polizas();", true);
 
