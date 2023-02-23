@@ -62,7 +62,7 @@
                     AssociatedUpdatePanelID="updPnlMes">
                     <ProgressTemplate>
                         <span>
-                            <img height="26" src="https://www.sysweb.unach.mx/Ingresos/Imagenes/load.gif" width="222" />
+                            <img height="40px" src="https://sysweb.unach.mx/SIAF-Contabilidad/images/ajax_loader_gray_512.gif"/>
                         </span>
                     </ProgressTemplate>
                 </asp:UpdateProgress>
@@ -83,10 +83,9 @@
                 <asp:UpdateProgress ID="updPgrPolizas" runat="server"
                     AssociatedUpdatePanelID="updPnlPolizas">
                     <ProgressTemplate>
-                        <asp:Image ID="img5" runat="server"
-                            AlternateText="Espere un momento, por favor.." Height="30px"
-                            ImageUrl="~/images/ajax_loader_gray_512.gif"
-                            ToolTip="Espere un momento, por favor.." Width="30px" />
+                        <span>
+                        <img height="40px" src="https://sysweb.unach.mx/SIAF-Contabilidad/images/ajax_loader_gray_512.gif"/>
+                        </span>
                     </ProgressTemplate>
                 </asp:UpdateProgress>
             </div>
@@ -95,7 +94,7 @@
             <div class="col">
                 <asp:UpdatePanel ID="updPnlPolizas" runat="server">
                     <ContentTemplate>
-                        <asp:GridView ID="grvPolizas" runat="server" AutoGenerateColumns="False" CssClass="mGrid" Width="100%" OnRowDeleting="grvPolizas_RowDeleting" EmptyDataText="No se encontraron pólizas." ShowHeaderWhenEmpty="True">
+                        <asp:GridView ID="grvPolizas" runat="server" AutoGenerateColumns="False" CssClass="mGrid" Width="100%" OnRowDeleting="grvPolizas_RowDeleting" EmptyDataText="No se encontraron pólizas." ShowHeaderWhenEmpty="True" OnSelectedIndexChanged="grvPolizas_SelectedIndexChanged">
                             <Columns>
                                 <asp:BoundField HeaderText="ID" DataField="IdPoliza" />
                                 <asp:BoundField HeaderText="CC" DataField="CENTRO_CONTABLE" />

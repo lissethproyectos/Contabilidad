@@ -214,5 +214,19 @@ namespace SAF.Contabilidad.Form
         {
             CargarGrid();
         }
+
+        protected void grvPolizas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), UniqueID, "VerPoliza('RP-005'," + SesionUsu.Usu_Ejercicio + ", '" + grvPolizas.SelectedRow.Cells[0].Text + "');", true);
+            }
+            catch (Exception ex)
+            {
+                Verificador = ex.Message;
+                CNComun.VerificaTextoMensajeError(ref Verificador);
+                ScriptManager.RegisterStartupScript(this, this.GetType(), UniqueID, "mostrar_modal(0, '" + Verificador + "');", true);
+            }
+        }
     }
 }
