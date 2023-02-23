@@ -1,0 +1,74 @@
+<cfdi:Comprobante xmlns:cfdi=3D"http://www.sat.gob.mx/cfd/3" xmlns:xsi=3D"h=
+ttp://www.w3.org/2001/XMLSchema-instance" xmlns:implocal=3D"http://www.sat.=
+gob.mx/implocal" xsi:schemaLocation=3D"http://www.sat.gob.mx/cfd/3 http://w=
+ww.sat.gob.mx/sitio_internet/cfd/3/cfdv33.xsd http://www.sat.gob.mx/imploca=
+l http://www.sat.gob.mx/sitio_internet/cfd/implocal/implocal.xsd" Version=
+=3D"3.3" Serie=3D"A" Folio=3D"9784" Fecha=3D"2021-02-12T08:11:36" Sello=3D"=
+lWz8qxVTcdM0iLm26MSeXwDZ0d4tl4g3juySCeNxANpVlDb0XXhTNkCTXq6bQugP4OQ9V9E/kcj=
+aUXivWpIZpY+k+Uv/FutA/FpDXAtXM2BbOdfVA7XwsqMrfHWAy8vwVYtavyt7bK7rJPZfu/tEZU=
+nOOz9SRBbVnj/sJCvNPBlBBbLQtJwIXGpSwkT7jqrivefjaCMwHDZ97dBbc70yyT9zhAcn/MjYa=
+UlhtOcogl/g1u6rocdwWtJiHmPJ84/Z8fh27edAj0KdbaHDAlCnK5J96CkfTNTAx7T/JQ3UH9VV=
+IyuDXsztvs3It49UIjQDP7tZok+yLcRLWYTeTHzFnw=3D=3D" FormaPago=3D"01" NoCertif=
+icado=3D"00001000000504772242" Certificado=3D"MIIF7TCCA9WgAwIBAgIUMDAwMDEwM=
+DAwMDA1MDQ3NzIyNDIwDQYJKoZIhvcNAQELBQAwggGEMSAwHgYDVQQDDBdBVVRPUklEQUQgQ0VS=
+VElGSUNBRE9SQTEuMCwGA1UECgwlU0VSVklDSU8gREUgQURNSU5JU1RSQUNJT04gVFJJQlVUQVJ=
+JQTEaMBgGA1UECwwRU0FULUlFUyBBdXRob3JpdHkxKjAoBgkqhkiG9w0BCQEWG2NvbnRhY3RvLn=
+RlY25pY29Ac2F0LmdvYi5teDEmMCQGA1UECQwdQVYuIEhJREFMR08gNzcsIENPTC4gR1VFUlJFU=
+k8xDjAMBgNVBBEMBTA2MzAwMQswCQYDVQQGEwJNWDEZMBcGA1UECAwQQ0lVREFEIERFIE1FWElD=
+TzETMBEGA1UEBwwKQ1VBVUhURU1PQzEVMBMGA1UELRMMU0FUOTcwNzAxTk4zMVwwWgYJKoZIhvc=
+NAQkCE01yZXNwb25zYWJsZTogQURNSU5JU1RSQUNJT04gQ0VOVFJBTCBERSBTRVJWSUNJT1MgVF=
+JJQlVUQVJJT1MgQUwgQ09OVFJJQlVZRU5URTAeFw0yMDA4MTcyMTI5MDFaFw0yNDA4MTcyMTI5M=
+DFaMIG7MR8wHQYDVQQDExZTTlIgT1BFUkFET1JBIFNBIERFIENWMR8wHQYDVQQpExZTTlIgT1BF=
+UkFET1JBIFNBIERFIENWMR8wHQYDVQQKExZTTlIgT1BFUkFET1JBIFNBIERFIENWMSUwIwYDVQQ=
+tExxTT1AxNjA2MjlGQzEgLyBTT0dIODMwMTIxM1M0MR4wHAYDVQQFExUgLyBTT0dIODMwMTIxSE=
+NTTE5SMDYxDzANBgNVBAsTBlVOSURBRDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBA=
+LTg2WPMaDFpAac/RHy/aY9j8SvlJB6o8W1oTIPwCJlXI1QivKEyKHk7VncyXahJPeQyezVAVN6L=
+tMOlAq/0nYP3MBh/OHjfWmVdl8CQk3eJ70gFDNRyQSBO/ffx3/wHmoHkBDpzzIQ5wfzV3XBtn79=
+dmX/GFglVg951Y94gBf2g1TjDNwQU5uUuoHWddk9hDIKuHqp/OBY+QmpUBGvbjSWhjwPLOdCT+1=
+WaGzulm9QWGZXlwbp3MizBIyRCE8xqb7OtV8q6k1nCXAGmu7sr4X4UWgHPH7UoPNvRnPKIev/nj=
+dKOXxx4CZnHr64Hmq6WPHOpakTxoCt7sx4i33+PeFcCAwEAAaMdMBswDAYDVR0TAQH/BAIwADAL=
+BgNVHQ8EBAMCBsAwDQYJKoZIhvcNAQELBQADggIBAKQExXi9GSZJmWr86oraOhkn7XHDPW0JeAZ=
+jp7QEEfkKG6N4zYCMyowqEjCGLGuPwPa9gBn9T0xHxTkQO0gfAf9NRBrSBO4e1XrAVr00K3RGGb=
+URn3r9sVoAlvqnrr3I6mNBaC15/IKQOj2SKKbLBNGnjI3fGZqdtMZQUX35fHFonbMeWYt62H4i8=
+Zyw+eYc7+kDau8x/qaLZOlRHC8y38nBphwRRrVvuwp0IW9yEfUoQHh2rDjwvrUeCRSnKFeEHAd1=
+adXoYgKKMgFwH83GSL2rkxPvTT0jwXwmF0VpmhHOo4d2s7zb8bDcBs0wvz7LW1vWdxfpxKHVn4e=
+cubaR2YwO4zE1lJqhs/E23f82urmr16vo1TcwCNevFyylFmA9O6oG3wSqfBD/Kf515c42efH4gM=
+i2K6mPCpeGnYCGoQE2bkROPSlIDp7ftyx0PuyHnNfyBYV+IWnNDDoAZCMSzUZfxl18RtcJhKXe9=
+/jXGaPJf/lWC2ZuhRcBEYslCWz5G0RBmQEbjbINIdkqJAd9wAIMAbw7bxWiNfvdep8Cm/0KFx0w=
+pYTlY00Ecfb3A9z3tAYakC0o39mxxiST9Lnj/vI+BEWENu7HaJ98v1xjdE9W7173Z0UaDaRXc52=
+mCEVBN0E0PBK+ZvCiJU9l+QTsAWn7S4ydxxQWcEW70iu+3BiA" CondicionesDePago=3D"CON=
+TADO" SubTotal=3D"1543.64" Moneda=3D"MXN" Total=3D"1698.00" TipoDeComproban=
+te=3D"I" MetodoPago=3D"PUE" LugarExpedicion=3D"30790">
+	<cfdi:Emisor RegimenFiscal=3D"601" Rfc=3D"SOP160629FC1" Nombre=3D"SNR OPER=
+ADORA SA DE CV"></cfdi:Emisor><cfdi:Receptor Rfc=3D"UAC750417LE8" Nombre=3D=
+"UNIVERSIDAD AUTONOMA DE CHIAPAS" UsoCFDI=3D"G03"></cfdi:Receptor><cfdi:Con=
+ceptos>
+		<cfdi:Concepto ClaveProdServ=3D"90111800" ClaveUnidad=3D"ROM" Cantidad=3D=
+"2.00" Unidad=3D"HABITACION" NoIdentificacion=3D"0001" Descripcion=3D"HAB. =
+SENCILLA HOSPEDAJE DEL 10 Y 11 DE FEBRERO 2021" ValorUnitario=3D"771.82" Im=
+porte=3D"1543.64"><cfdi:Impuestos><cfdi:Traslados><cfdi:Traslado Base=3D"15=
+43.64" Impuesto=3D"002" TipoFactor=3D"Tasa" TasaOCuota=3D"0.080000" Importe=
+=3D"123.49"/></cfdi:Traslados></cfdi:Impuestos></cfdi:Concepto></cfdi:Conce=
+ptos><cfdi:Impuestos TotalImpuestosTrasladados=3D"123.49"><cfdi:Traslados><=
+cfdi:Traslado Impuesto=3D"002" TipoFactor=3D"Tasa" TasaOCuota=3D"0.080000" =
+Importe=3D"123.49"/></cfdi:Traslados></cfdi:Impuestos><cfdi:Complemento><tf=
+d:TimbreFiscalDigital xsi:schemaLocation=3D"http://www.sat.gob.mx/TimbreFis=
+calDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/Tim=
+breFiscalDigitalv11.xsd" xmlns:tfd=3D"http://www.sat.gob.mx/TimbreFiscalDig=
+ital" xmlns:xsi=3D"http://www.w3.org/2001/XMLSchema-instance" Version=3D"1.=
+1" UUID=3D"1421E320-51CE-4AF1-8EEA-904199F1995D" FechaTimbrado=3D"2021-02-1=
+2T08:14:20" RfcProvCertif=3D"MAS0810247C0" SelloCFD=3D"lWz8qxVTcdM0iLm26MSe=
+XwDZ0d4tl4g3juySCeNxANpVlDb0XXhTNkCTXq6bQugP4OQ9V9E/kcjaUXivWpIZpY+k+Uv/Fut=
+A/FpDXAtXM2BbOdfVA7XwsqMrfHWAy8vwVYtavyt7bK7rJPZfu/tEZUnOOz9SRBbVnj/sJCvNPB=
+lBBbLQtJwIXGpSwkT7jqrivefjaCMwHDZ97dBbc70yyT9zhAcn/MjYaUlhtOcogl/g1u6rocdwW=
+tJiHmPJ84/Z8fh27edAj0KdbaHDAlCnK5J96CkfTNTAx7T/JQ3UH9VVIyuDXsztvs3It49UIjQD=
+P7tZok+yLcRLWYTeTHzFnw=3D=3D" NoCertificadoSAT=3D"00001000000505142236" Sel=
+loSAT=3D"Ahsl+oZBCMbZmFH4RmXabyGEk1vVf+7jSgfGUqYviJVuLzlBBg6bOfu+tnMd+yUBuR=
+FW6hEJc7w8ZUUhC7ekiaUxWjyqgiHd5a5hDKuXTzF4PZE5s6oOXZEAuCPOnB64Q6ECm2T1xZboO=
+AjX7B0WLi3+QUP5EmKKUKQAIcOIiOWun/put3lmAHTzH6FMgOZOMoJx99bsB2URC/YNAWoZYI/E=
+FRM2eyPFQDyLamSe4PJYWbPQb2UzfaUL+RPTvcsb9QOUz2NaJ5qE2ujj2KYKsFDr51neWc/tD4I=
+pv8dcSZ3ChAEgTBXAcvqTSzujG5BnkAEHINb4k3Xi3iIxnn/MNA=3D=3D"/><implocal:Impue=
+stosLocales version=3D"1.0" TotaldeRetenciones=3D"0.00" TotaldeTraslados=3D=
+"30.87"><implocal:TrasladosLocales ImpLocTrasladado=3D"HOSP" TasadeTraslado=
+=3D"2.00" Importe=3D"30.87"/></implocal:ImpuestosLocales></cfdi:Complemento=
+></cfdi:Comprobante>

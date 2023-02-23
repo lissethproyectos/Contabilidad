@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<cfdi:Comprobante Version="3.3" Serie="TGX" Folio="276793713" Fecha="2020-03-11T07:38:28" Sello="d02IyAPEJfJP2mf2ecR21aFdfPinanIrdtisqxCVyoUIGM/EEygeSAW2AU2qArIQxwCac1wZk2CieLIKwuAO7kHAppCI0Y7/YsKig5b8kpbnu1vWvEvHbC43j1Wymcdp55uDxDqXVndffiMQ9hTgi9dSR5ZWSYyWFElw9J1wGGLcObERE3iNf9LcVRnFnEVpPVDkzZH8eq3bPWr1kcBKlXBfbzxUQak5P0YD3lLWY6sNLb5cWzpafcPoFoMbHLxzyw5FhZ30i4H30x7vsKIvF911WVr87u4Esrer4MC/61Uvhi8e43eG9Mk10Q8XM/iK9vtpLz2NLzVtQs+wpO5KCA==" FormaPago="01" NoCertificado="00001000000405409176" Certificado="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" SubTotal="44.40" Moneda="MXN" Total="51.50" TipoDeComprobante="I" MetodoPago="PUE" LugarExpedicion="29129" xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv33.xsd" xmlns:cfdi="http://www.sat.gob.mx/cfd/3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pago10="http://www.sat.gob.mx/Pagos" xmlns:implocal="http://www.sat.gob.mx/implocal">
+  <cfdi:Emisor Rfc="CCO8605231N4" Nombre="CADENA COMERCIAL OXXO, SA DE CV" RegimenFiscal="623"/>
+  <cfdi:Receptor Rfc="UAC750417LE8" Nombre="UNIVERSIDAD AUTONOMA DE CHIAPAS" UsoCFDI="G03"/>
+  <cfdi:Conceptos>
+    <cfdi:Concepto ClaveProdServ="50202311" Cantidad="1.000" ClaveUnidad="EA" Descripcion="20OZ CAP VAINI TGX       " ValorUnitario="20.69" Importe="20.69">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="20.69" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="3.31"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto ClaveProdServ="50192701" Cantidad="1.000" ClaveUnidad="EA" Descripcion="CUERN BIMKINGO 140GR     " ValorUnitario="23.71" Importe="23.71">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="23.71" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="3.79"/>
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+  </cfdi:Conceptos>
+  <cfdi:Impuestos TotalImpuestosTrasladados="7.10">
+    <cfdi:Traslados>
+      <cfdi:Traslado Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="7.10"/>
+    </cfdi:Traslados>
+  </cfdi:Impuestos>
+  <cfdi:Complemento>
+        <tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigitalv11.xsd" Version="1.1" UUID="03ec617d-3e05-4c83-bfc5-10c90fbd7e00" RfcProvCertif="SNF171020F3A" FechaTimbrado="2020-03-11T07:38:29" SelloCFD="d02IyAPEJfJP2mf2ecR21aFdfPinanIrdtisqxCVyoUIGM/EEygeSAW2AU2qArIQxwCac1wZk2CieLIKwuAO7kHAppCI0Y7/YsKig5b8kpbnu1vWvEvHbC43j1Wymcdp55uDxDqXVndffiMQ9hTgi9dSR5ZWSYyWFElw9J1wGGLcObERE3iNf9LcVRnFnEVpPVDkzZH8eq3bPWr1kcBKlXBfbzxUQak5P0YD3lLWY6sNLb5cWzpafcPoFoMbHLxzyw5FhZ30i4H30x7vsKIvF911WVr87u4Esrer4MC/61Uvhi8e43eG9Mk10Q8XM/iK9vtpLz2NLzVtQs+wpO5KCA==" NoCertificadoSAT="00001000000414211380" SelloSAT="fbDJ3Mq9AF6YuFTpBpLRdpxwf0oNidI0BZvTTa0FlRm1vu1bhEiGao9KXoK7tI4bOqgP3xihc2vTCcGifAlSIcr/oDWBtt5v63FINTVsM5i4q+DvX3bkO9hTGTpxuvNE5BfC7r35Szt3MH8x4yBLgI2xsbaKKN49dEG+bdcSlkDLB71m5kAVl7dMEV7/7Dr0rVCsTaKCrS0Kk6hwVLTXzzx5GBHHAh2ubBYM0gFi8tWdTfZnmBTvmeQM5vrSdQCKdwvSY8cLnzgX5PejDvqAelQJGRhtNIzvsn92iLua3rnGLpZMF4n65JYrQNOieenwOZMAvqJJEfzd9CD6c/FI9A=="/>
+    </cfdi:Complemento><cfdi:Addenda>
+    <ns:diverza version="1.1" xmlns:ns="http://www.diverza.com/ns/addenda/diverza/1">
+      <ns:generales tipoDocumento="Factura"/>
+      <ns:clavesDescripcion c_TipoDeComprobante="Ingreso" c_MetodoPago="Pago en una sola exhibición" c_RegimenFiscal="Opcional para Grupos de Sociedades" c_UsoCFDI="Gastos en general"/>
+      <ns:receptor>
+        <ns:domicilioFiscalR calle="BOULEVARD BELISARIO DOMINGUEZ KM1081" ciudad="TUXTLA GUTIERREZ" municipio="TUXTLA GUTIERREZ" pais="MEXICO" codigoPostal="29050"/>
+      </ns:receptor>
+    </ns:diverza>
+  </cfdi:Addenda>
+</cfdi:Comprobante>

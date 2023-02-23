@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><cfdi:Comprobante Certificado="MIIGfDCCBGSgAwIBAgIUMDAwMDEwMDAwMDA0MDU4NTM3MzUwDQYJKoZIhvcNAQELBQAwggGyMTgwNgYDVQQDDC9BLkMuIGRlbCBTZXJ2aWNpbyBkZSBBZG1pbmlzdHJhY2nDs24gVHJpYnV0YXJpYTEvMC0GA1UECgwmU2VydmljaW8gZGUgQWRtaW5pc3RyYWNpw7NuIFRyaWJ1dGFyaWExODA2BgNVBAsML0FkbWluaXN0cmFjacOzbiBkZSBTZWd1cmlkYWQgZGUgbGEgSW5mb3JtYWNpw7NuMR8wHQYJKoZIhvcNAQkBFhBhY29kc0BzYXQuZ29iLm14MSYwJAYDVQQJDB1Bdi4gSGlkYWxnbyA3NywgQ29sLiBHdWVycmVybzEOMAwGA1UEEQwFMDYzMDAxCzAJBgNVBAYTAk1YMRkwFwYDVQQIDBBEaXN0cml0byBGZWRlcmFsMRQwEgYDVQQHDAtDdWF1aHTDqW1vYzEVMBMGA1UELRMMU0FUOTcwNzAxTk4zMV0wWwYJKoZIhvcNAQkCDE5SZXNwb25zYWJsZTogQWRtaW5pc3RyYWNpw7NuIENlbnRyYWwgZGUgU2VydmljaW9zIFRyaWJ1dGFyaW9zIGFsIENvbnRyaWJ1eWVudGUwHhcNMTcwNDE4MTczNTI5WhcNMjEwNDE4MTczNTI5WjCCARsxMzAxBgNVBAMTKlNFIENPTUUgU0FCUk9TTyBFTiBBR1VBU0NBTElFTlRFUyBTQSBERSBDVjEzMDEGA1UEKRMqU0UgQ09NRSBTQUJST1NPIEVOIEFHVUFTQ0FMSUVOVEVTIFNBIERFIENWMTMwMQYDVQQKEypTRSBDT01FIFNBQlJPU08gRU4gQUdVQVNDQUxJRU5URVMgU0EgREUgQ1YxJTAjBgNVBC0THFNDUzA3MDQyNUFaMCAvIFpFUEk4MjEyMTMxREExHjAcBgNVBAUTFSAvIFpFUEk4MjEyMTNIQ1NQTkcwNTEzMDEGA1UECxMqU0UgQ09NRSBTQUJST1NPIEVOIEFHVUFTQ0FMSUVOVEVTIFNBIERFIENWMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqSSiAFoYBJJutrs4ogruOzNNTAglQN/veef6XsLQgMyzTlG9j3Ml3cw2avUb3iZc/bFq8Jn8gEnc1MBYmqsoHI/41t7+0r3PY4G0aTRsCNYK28i0fIVfcRvsGOM3aHcToEJ21MNK+xCL/Mdh+xhGJl4b8VXZviDjn2ZQvXMexXGCG83blnjUN11tYDCc/UT1gz50KBoJXAcgRBP8KboEfC0Y+DDME+e0EKLs5X7DSiRvL38UAPzoqqupusgmNHeRzCI83vnvV8O4pj2wojHS6X3Qgo4LTDUX2zplz0vco8XQlk/IoZMjfyWItp1d6Np94/IHE4FSIm70gFSNU5JLLQIDAQABox0wGzAMBgNVHRMBAf8EAjAAMAsGA1UdDwQEAwIGwDANBgkqhkiG9w0BAQsFAAOCAgEAWl+QXwdEK+/UyGilmjokvrsNqSwZGAlCuAUm11UOziZV8JiLjmlUdlZgJlgqI9RNAqoRhHbw1txLz/PyHIAXOUNtOCfwsJuiZiWw6mEWNsWvh0W1yr7Mt4n7qwOtDPYXYMSdZGzfCFbYWFPw6Oa2Fer0UfGkRz3XZKVkGJQoHc5W2OfQoC0P01nBkjP9qq+e1T4HVKS9dDKjbNmhuqgfEdyGm/FSPi0VlcginrUK6P+loqxHI0THNVVvkVfw3MWvhB1In920PLWnzrHa5c2wMlFQ39QvLcE0pADFYnHGpv+NQee3JSlZlBkXw72syTmzC+96T9OjTQBWwCE77nOU3F+jKzb4lhp2P4PP/1kQnDlDApjDbQBMAfpHZiNGkd6DyvtwYds/csUZF5kUgCcpa0Snh9ZlP2N0CVNI/HQJya4eFujWo82hCxxJF0rkgVoGWbdeph0qR0jcC67+JuY/ujgaEr8n1Df8KLQNv+LmvYPE7YGyTsulIWJDDbVpo9dlO6DfjGeUQN7iNJdaLyPtz17wAASwkNTnpmU/JGT9ms56fcNo9pOSEC8O/GIpgdL6e1q07zEePtDFiZb3QRAExBxRDx39Zqx3ASHd6RQBsNbXSAtQMXcekm1czZ1HiKimN2vNRna6dCXKZ0zh87BYghJdLDpaiGMoVaao5pzclwo=" Fecha="2021-01-28T10:50:04" Folio="24577" FormaPago="28" LugarExpedicion="29050" MetodoPago="PUE" Moneda="MXN" NoCertificado="00001000000405853735" Sello="OhikMnxTGiH9UMGSICe2h+Es5DsfErA8Jbr84poBMX5MGGgdWEs46ypSsRnCOo64ngjdbsnROc6S8aymZ0gCdjrOTRMqLl4tMEhUYG/HBBV9lq4yugkWfmHwneyoYmQgigk4z82lKvtDG+jbcKW59enQGdB65cCDTuKXYbWqyWYjS4bytjRtJoCduOk999RmRmKdStkdeBz5iUpjVNgtg/2y9Fc0iEyCtUTVWWuPA6yFcuxUybcBp0Ya6eemeKgNwisejPwiXIRUTW8QWTAf9vu9f/9K3ocrukaEGrUAEAGEgTuZCJavBzFB5IcC4L5XwSjt6OO2yOp18JM6/LGqNA==" Serie="DO" SubTotal="223.58" TipoDeComprobante="I" Total="259.35" Version="3.3" xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv33.xsd" xmlns:cfdi="http://www.sat.gob.mx/cfd/3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <cfdi:Emisor Nombre="SE COME SABROSO EN AGUASCALIENTES, S.A. DE C.V." RegimenFiscal="601" Rfc="SCS070425AZ0"/>
+    <cfdi:Receptor Nombre="UNIVERSIDAD AUTONOMA DE CHIAPAS" Rfc="UAC750417LE8" UsoCFDI="G03"/>
+    <cfdi:Conceptos>
+        <cfdi:Concepto Cantidad="1" ClaveProdServ="50181901" ClaveUnidad="H87" Descripcion="REBANADA PASTEL DE ELOTE" Importe="29.48" NoIdentificacion="690503" ValorUnitario="29.48">
+            <cfdi:Impuestos>
+                <cfdi:Traslados>
+                    <cfdi:Traslado Base="29.48" Importe="4.72" Impuesto="002" TasaOCuota="0.160000" TipoFactor="Tasa"/>
+                </cfdi:Traslados>
+            </cfdi:Impuestos>
+        </cfdi:Concepto>
+        <cfdi:Concepto Cantidad="1" ClaveProdServ="50131609" ClaveUnidad="H87" Descripcion="OMELETTE D/CHAMP C/QSO PANELA" Importe="74.53" NoIdentificacion="690503" ValorUnitario="74.53">
+            <cfdi:Impuestos>
+                <cfdi:Traslados>
+                    <cfdi:Traslado Base="74.53" Importe="11.92" Impuesto="002" TasaOCuota="0.160000" TipoFactor="Tasa"/>
+                </cfdi:Traslados>
+            </cfdi:Impuestos>
+        </cfdi:Concepto>
+        <cfdi:Concepto Cantidad="1" ClaveProdServ="50307025" ClaveUnidad="H87" Descripcion="PLATANOS CON CREMA" Importe="23.75" NoIdentificacion="690503" ValorUnitario="23.75">
+            <cfdi:Impuestos>
+                <cfdi:Traslados>
+                    <cfdi:Traslado Base="23.75" Importe="3.80" Impuesto="002" TasaOCuota="0.160000" TipoFactor="Tasa"/>
+                </cfdi:Traslados>
+            </cfdi:Impuestos>
+        </cfdi:Concepto>
+        <cfdi:Concepto Cantidad="1" ClaveProdServ="50201708" ClaveUnidad="H87" Descripcion="CAFE CON LECHE DESLACTOSADO" Importe="33.58" NoIdentificacion="690503" ValorUnitario="33.58">
+            <cfdi:Impuestos>
+                <cfdi:Traslados>
+                    <cfdi:Traslado Base="33.58" Importe="5.37" Impuesto="002" TasaOCuota="0.160000" TipoFactor="Tasa"/>
+                </cfdi:Traslados>
+            </cfdi:Impuestos>
+        </cfdi:Concepto>
+        <cfdi:Concepto Cantidad="1" ClaveProdServ="50202305" ClaveUnidad="H87" Descripcion="J. MIXTO (NARANJA/ZANAHORIA)" Importe="37.67" NoIdentificacion="690503" ValorUnitario="37.67">
+            <cfdi:Impuestos>
+                <cfdi:Traslados>
+                    <cfdi:Traslado Base="37.67" Importe="6.03" Impuesto="002" TasaOCuota="0.160000" TipoFactor="Tasa"/>
+                </cfdi:Traslados>
+            </cfdi:Impuestos>
+        </cfdi:Concepto>
+        <cfdi:Concepto Cantidad="1" ClaveProdServ="50201711" ClaveUnidad="H87" Descripcion="TE DE MANZANILA" Importe="24.57" NoIdentificacion="690503" ValorUnitario="24.57">
+            <cfdi:Impuestos>
+                <cfdi:Traslados>
+                    <cfdi:Traslado Base="24.57" Importe="3.93" Impuesto="002" TasaOCuota="0.160000" TipoFactor="Tasa"/>
+                </cfdi:Traslados>
+            </cfdi:Impuestos>
+        </cfdi:Concepto>
+    </cfdi:Conceptos>
+    <cfdi:Impuestos TotalImpuestosTrasladados="35.77">
+        <cfdi:Traslados>
+            <cfdi:Traslado Importe="35.77" Impuesto="002" TasaOCuota="0.160000" TipoFactor="Tasa"/>
+        </cfdi:Traslados>
+    </cfdi:Impuestos>
+    <cfdi:Complemento>
+        <tfd:TimbreFiscalDigital Version="1.1" SelloCFD="OhikMnxTGiH9UMGSICe2h+Es5DsfErA8Jbr84poBMX5MGGgdWEs46ypSsRnCOo64ngjdbsnROc6S8aymZ0gCdjrOTRMqLl4tMEhUYG/HBBV9lq4yugkWfmHwneyoYmQgigk4z82lKvtDG+jbcKW59enQGdB65cCDTuKXYbWqyWYjS4bytjRtJoCduOk999RmRmKdStkdeBz5iUpjVNgtg/2y9Fc0iEyCtUTVWWuPA6yFcuxUybcBp0Ya6eemeKgNwisejPwiXIRUTW8QWTAf9vu9f/9K3ocrukaEGrUAEAGEgTuZCJavBzFB5IcC4L5XwSjt6OO2yOp18JM6/LGqNA==" UUID="8DF2E554-D610-43BB-BCE2-44A399C8F0B6" FechaTimbrado="2021-01-28T10:49:18" RfcProvCertif="STO020301G28" NoCertificadoSAT="00001000000505764660" SelloSAT="fcv/wKwhKjLDSvG7xSgq9+WzSMXjfjyLPsn2Ejop9rYkylQNoIDYddpRA7+ScDr+E/wNaf0G8sYuoXDSVtWuqeBRUGYG3XbSWSH2rXHpUHzfku69/i7Hz/iwHY2nu2iKiVcO14HjhKPdtQyjMgQlQDG9GgkDnqe1CMlWlNYT6yDhVFOY9Y6mxG4M3U7h3HZXbuCjQfIrJnm1Y1CJUD/l3oypW/xW4jzqY8lG2QfxdH1G0Tn6n2LvS6fjz5sFTXJok5poS23kBPndDqhGDVuohdwVdF+2LyuSp942WLhfUbJ7pJwg5kUOLsHE+z+YXhSwAZqFHv7X43zF7LD2E1DQ6w==" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigitalv11.xsd" xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital"/>
+    </cfdi:Complemento>
+</cfdi:Comprobante>

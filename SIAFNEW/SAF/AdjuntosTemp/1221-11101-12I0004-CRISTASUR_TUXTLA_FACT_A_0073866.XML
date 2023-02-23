@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<cfdi:Comprobante xmlns:cfdi="http://www.sat.gob.mx/cfd/3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv33.xsd" Version="3.3" Serie="A" Folio="73866" Fecha="2021-10-05T17:26:51" Sello="YbUn/H/nrC2ZG86DUk1npDYv93baletd+XbGdHQS80ciM3IhdNE3iIcaklGzOpAQqqgZxAasU59haTgxVIt5sXUkorcCyrEEXiVhqpv8SXoxZ1nZG0dh9RqV1zeg1RZXEvOh+oK4XuOZ23ZQyOzfxUW35mTUyZT18RP9TkaXkWieSJp02w0hlPPFnz93uuoOrCD8weY3R7dDW4W7V4Sl5m0MI1QkYOHIWG/k2PAUU/NcV+cQTXTnTLPMgQqQeQYmvdZEq90ehtSlo0BCJWoaWaSnZ3XWE1leZtDi7p4nYwVr0z6/MoeqSfRvrKBcb90tNDAPL9XKsmPTC3xA7NcBLg==" FormaPago="99" NoCertificado="00001000000508799471" Certificado="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" CondicionesDePago="CONTADO" SubTotal="410.59" Moneda="MXN" TipoCambio="1" Total="476.28" TipoDeComprobante="I" MetodoPago="PPD" LugarExpedicion="29000">
+  <cfdi:Emisor Rfc="CME1201127E0" Nombre="CRISTAGGT DE MEXICO SA DE CV" RegimenFiscal="601" />
+  <cfdi:Receptor Rfc="UAC750417LE8" Nombre="UNIVERSIDAD AUTONOMA DE CHIAPAS" UsoCFDI="G03" />
+  <cfdi:Conceptos>
+    <cfdi:Concepto ClaveProdServ="31133710" NoIdentificacion="1936" Cantidad="3.000000" ClaveUnidad="KGM" Unidad="KILO" Descripcion="VINIL PATA COCHINO 11, COLOR NEGRO  REM: 154382  DEL 05/10/2021" ValorUnitario="91.000000" Importe="273.000000">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="273.000000" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="43.680000" />
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto ClaveProdServ="31133710" NoIdentificacion="2615" Cantidad="1.000000" ClaveUnidad="H87" Unidad="PIEZA" Descripcion="SILICON USO GENERAL SELLAMEX, COLOR NEGRO  REM: 154382  DEL 05/10/2021" ValorUnitario="65.970000" Importe="65.970000">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="65.970000" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="10.555200" />
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto ClaveProdServ="31162201" NoIdentificacion="2948" Cantidad="1.000000" ClaveUnidad="H87" Unidad="BOLSA" Descripcion="REMACHES 56, COLOR NEGRO  REM: 154382  DEL 05/10/2021" ValorUnitario="35.700000" Importe="35.700000">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="35.700000" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="5.712000" />
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto ClaveProdServ="30181507" NoIdentificacion="2905" Cantidad="2.000000" ClaveUnidad="H87" Unidad="PIEZA" Descripcion="JALADERA DE TROMPA DE ELEFANTE, COLOR NEGRO  REM: 154382  DEL 05/10/2021" ValorUnitario="6.320000" Importe="12.640000">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="12.640000" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="2.022400" />
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+    <cfdi:Concepto ClaveProdServ="31171554" NoIdentificacion="1749" Cantidad="2.000000" ClaveUnidad="H87" Unidad="PIEZA" Descripcion="CARRETILLA T.EUROPEA PARA ZOCLO PUERTA 2&quot; GORRA DE NAPOLEON  REM: 154382  DEL 05/10/2021" ValorUnitario="11.640000" Importe="23.280000">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="23.280000" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="3.724800" />
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+  </cfdi:Conceptos>
+  <cfdi:Impuestos TotalImpuestosTrasladados="65.69">
+    <cfdi:Traslados>
+      <cfdi:Traslado Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="65.69" />
+    </cfdi:Traslados>
+  </cfdi:Impuestos>
+  <cfdi:Complemento>
+    <tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigitalv11.xsd" Version="1.1" FechaTimbrado="2021-10-05T17:28:05" UUID="16bea1eb-5a9d-4020-8fdd-6b5ed371781b" NoCertificadoSAT="00001000000507247013" SelloCFD="YbUn/H/nrC2ZG86DUk1npDYv93baletd+XbGdHQS80ciM3IhdNE3iIcaklGzOpAQqqgZxAasU59haTgxVIt5sXUkorcCyrEEXiVhqpv8SXoxZ1nZG0dh9RqV1zeg1RZXEvOh+oK4XuOZ23ZQyOzfxUW35mTUyZT18RP9TkaXkWieSJp02w0hlPPFnz93uuoOrCD8weY3R7dDW4W7V4Sl5m0MI1QkYOHIWG/k2PAUU/NcV+cQTXTnTLPMgQqQeQYmvdZEq90ehtSlo0BCJWoaWaSnZ3XWE1leZtDi7p4nYwVr0z6/MoeqSfRvrKBcb90tNDAPL9XKsmPTC3xA7NcBLg==" SelloSAT="ixRfrtWCP5vr9sKzYuxEXOzV1balGltMhG0GqPsfPPDQOu90yMIPLNIjNaU1452O47/3YRh7G+Hqqqyvny3whvbmASnBP9V2G4ZiJhmP5idFpzKu3dX+RDUtkvv1sHz0gBEHyib6u+4jsKqcEijQHyXLYGmY+zipR8Zq0wX9d2mYxuxMmn13RWcuahEIi1x+CmGXBUjLt8jRLwQi+sRllPxBgZCX9isNYOyaaL5nMCdQmAVKzyMVTBy6HIN1xsf6V26bDmP+sBM4oOHBDT5yu/VIkQGp/IDJMJQ9WFVBPWbKQxSFq0ZLN1xdOM6oFRPSsyJkb0EOHFPwGk2w9eYQLw==" RfcProvCertif="CAD100607RY8" />
+  </cfdi:Complemento>
+</cfdi:Comprobante>

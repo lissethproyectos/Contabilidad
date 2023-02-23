@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cfdi:Comprobante xmlns:cfdi="http://www.sat.gob.mx/cfd/3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv33.xsd" Version="3.3" Serie="FCT" Folio="092191" Fecha="2022-05-06T18:39:33" Sello="dZn3o0uwwitrtjKk6SX4iupxujX+AOIMeDfQOyoRSYfulHf3mcv7W4moWtM+dcTRd1uUVAFaXoA1d8krOJDofRxeUORetyQtolHMYSWZBQhF1JVRyEd1Qvmj3WWC13wK9tUDlWGRxj7s1NnHlBcxvKIc7CMh2QBhsqT9n7CaOpCKYZK0MZ8lpmZdqQH4k3xU4cdqU64nL8nCj1k0eNpL0Nmx1K/WulMVZ1MhYo43CjiLmYo8+3SP0wL8+M00hz3FbmcIlmMowJ3eT12c1tULbfHHsJMcf9uIq0Ur27I3nzL8eFEiF89s32S9HQQ/RoKJcJFl3j06UDeQhsLAUS/bDw==" FormaPago="03" NoCertificado="00001000000506112074" Certificado="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" CondicionesDePago="CONTADO" SubTotal="1681.00" Moneda="MXN" Total="80000" TipoDeComprobante="I" MetodoPago="PUE" LugarExpedicion="30093">
+  <cfdi:Emisor Rfc="TTI961202IM1" Nombre="TONY TIENDAS S.A. DE C.V." RegimenFiscal="601" />
+  <cfdi:Receptor Rfc="UAC750417LE8" Nombre="UNIVERSIDAD AUTONOMA DE CHIAPAS" UsoCFDI="P01" />
+  <cfdi:Conceptos>
+    <cfdi:Concepto ClaveProdServ="14111525" NoIdentificacion="09730008" Cantidad="20" ClaveUnidad="H87" Unidad="PIEZA" Descripcion="PAPEL BOND 37K CTA BCO C/500H SMARMULT" ValorUnitario="84.05" Importe="1681.00">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="1681.00" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="268.96" />
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+  </cfdi:Conceptos>
+  <cfdi:Impuestos TotalImpuestosTrasladados="268.96">
+    <cfdi:Traslados>
+      <cfdi:Traslado Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="268.96" />
+    </cfdi:Traslados>
+  </cfdi:Impuestos>
+  <cfdi:Complemento>
+    <tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigitalv11.xsd" Version="1.1" UUID="E9746999-78DE-45FA-8CDD-8343B1DAE999" FechaTimbrado="2022-05-06T21:30:08" RfcProvCertif="SIF0403229F9" SelloCFD="dZn3o0uwwitrtjKk6SX4iupxujX+AOIMeDfQOyoRSYfulHf3mcv7W4moWtM+dcTRd1uUVAFaXoA1d8krOJDofRxeUORetyQtolHMYSWZBQhF1JVRyEd1Qvmj3WWC13wK9tUDlWGRxj7s1NnHlBcxvKIc7CMh2QBhsqT9n7CaOpCKYZK0MZ8lpmZdqQH4k3xU4cdqU64nL8nCj1k0eNpL0Nmx1K/WulMVZ1MhYo43CjiLmYo8+3SP0wL8+M00hz3FbmcIlmMowJ3eT12c1tULbfHHsJMcf9uIq0Ur27I3nzL8eFEiF89s32S9HQQ/RoKJcJFl3j06UDeQhsLAUS/bDw==" NoCertificadoSAT="00001000000508768672" SelloSAT="B4T86LJLMaj/RSU+UT1snJskPWQREpq2n0FdX15bh1NRPc+k7QU1k976SJQoCtOLHh2+MYM1BNsaKCyrXgsxMAlSmkfg5BlzAccye7DIMIwwJlcaxzkMXsXqwwgfIegRQ4ttMmLMW4oioZGlLE+1Tuf1vE0QYXw95f/xV2aVIPrZaWSrwFMX6jBOjpWqw+UpRzipGSLW6rDwrL4V51AtwMtzrVbpEQslcBq4gX5S8G1SUCO5vzrV1L4ezOQyNKr0PzjWA6brmfvSLh827TNJhrkarSCn2xBwZpOgRCfkWT4Lc9KboIiGYJ/toGAVf/OaBCJKlDnsTkWVPhb6hkS2mw==" />
+  </cfdi:Complemento>
+  <cfdi:Addenda>
+    <bovadd:BOVEDAFISCAL xmlns:bovadd="http://kontender.mx/namespace/boveda" xmlns:kon="http://kontender.mx/namespace" xsi:schemaLocation="http://kontender.mx/namespace/boveda http://kontender.mx/namespace/boveda/BOVEDAFISCAL.xsd http://kontender.mx/namespace http://kontender.mx/namespace/AddendaK.xsd">
+      <bovadd:ImporteLetra importe="MIL NOVECIENTOS CUARENTA Y NUEVE PESOS 96/100 M.N." />
+      <bovadd:UsoCFDI UsoCFDI="P01 POR DEFINIR" />
+      <bovadd:MetodosPago MetodoPagoSAT="PUE - PAGO EN UNA SOLA EXHIBICION" />
+      <bovadd:FormaPago FormaPagoSAT="03 TRANSFERENCIA ELECTRONICA DE FONDOS" />
+      <bovadd:TipoDoctoElectronico TipoDocumento="FACTURA MAYOREO" />
+      <bovadd:BovedaFiscal numeroCliente="263004844" razonSocialCliente="UNIVERSIDAD AUTONOMA DE CHIAPAS" correoEmisor="ty-cfdi-emitidos@facturacion-tony.com.mx" correoReceptor="unachcomitan@hotmail.com" almacen="263" tipo="FACTURA" condicion="CONTADO" />
+      <bovadd:DireccionEmisor Calle="AV.URANO" NoExterior="585" NoInterior="B" Colonia="FRACC.JARDINES DE MOCAMBO" Localidad="BOCA DEL RIO" Referencia="ENTRE CERRADA CESAR LUNA BAUZA Y CALZ.EJ. MEXICANO" Municipio="BOCA DEL RIO" Ciudad="BOCA DEL RIO" Estado="VERACRUZ" Pais="MEXICO" CodigoPostal="94299" Telefono="9231700" />
+      <bovadd:DireccionSucursal Calle="BLVD. DE LAS FEDERACIONES KM 1260.5" NoExterior="4021" NoInterior="LOC. 1,2,3" Colonia="CHICHIMA ACAPETAHUA" Localidad="COMITAN DE DOMINGUEZ" Referencia="PLAZA LAS FLORES" Municipio="COMITAN DE DOMINGUEZ" Ciudad="COMITAN DE DOMINGUEZ" Estado="CHIAPAS" Pais="MEXICO" CodigoPostal="30093" />
+      <bovadd:DireccionReceptor Calle="BOULEVARD BELISARIO DOMINGUEZ KILOMETRO 1081" NoExterior="SIN NUMERO" NoInterior="" Colonia="TERAN" Localidad="TUXTLA GUTIERREZ" Referencia="" Municipio="TUXTLA GUTIERREZ" Delegacion="TUXTLA GUTIERREZ" Ciudad="TUXTLA GUTIERREZ" Estado="CHIAPAS" Pais="MEXICO" CodigoPostal="29050" />
+      <bovadd:NombreComercial Nombre="UNIVERSIDAD AUTONOMA DE CHIAPAS" />
+      <bovadd:ClaveTipoFolio clave="FAM" />
+      <bovadd:TR transaccion="RTGWMQ" />
+      <bovadd:OrdenCompra folio="" />
+      <bovadd:NotaDeVenta folio="" />
+    </bovadd:BOVEDAFISCAL>
+  </cfdi:Addenda>
+</cfdi:Comprobante>
