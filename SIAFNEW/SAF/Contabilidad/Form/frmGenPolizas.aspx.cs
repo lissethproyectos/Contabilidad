@@ -23,7 +23,7 @@ namespace SAF.Contabilidad.Form
         //a comer
         //por fin, al fin 6:47
         //otro cambio, 6:49
-
+//cambio desde a pagina web 6:51
 
         #region <Variables>
         Int32[] Celdas = new Int32[] { 0, 15, 16, 17, 18, 19, 20 };
