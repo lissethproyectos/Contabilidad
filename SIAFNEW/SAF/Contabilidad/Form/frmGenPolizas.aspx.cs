@@ -21,7 +21,9 @@ namespace SAF.Contabilidad.Form
         //ultimo y nos vamos
         //bueno uno más y ya
         //a comer
-        //no quedo
+        //por fin, al fin 6:47
+
+
         #region <Variables>
         Int32[] Celdas = new Int32[] { 0, 15, 16, 17, 18, 19, 20 };
         string Verificador = string.Empty;
