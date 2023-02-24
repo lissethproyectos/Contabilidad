@@ -25,6 +25,7 @@ namespace SAF.Contabilidad.Form
         //otro cambio, 6:49
 //cambio desde a pagina web 6:51
 //Cambio 6:54
+//Cambio 7:00
         #region <Variables>
         Int32[] Celdas = new Int32[] { 0, 15, 16, 17, 18, 19, 20 };
         string Verificador = string.Empty;
