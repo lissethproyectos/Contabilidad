@@ -22,6 +22,7 @@ namespace SAF.Contabilidad.Form
         //bueno uno más y ya
         //a comer
         //por fin, al fin 6:47
+        //otro cambio, 6:49
 
 
         #region <Variables>
