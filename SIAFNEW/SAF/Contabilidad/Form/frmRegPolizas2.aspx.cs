@@ -337,9 +337,12 @@ namespace SAF.Form
         private List<Poliza> GetList()
         {
             divErrorTot.Visible = false;
+            Session["Lista1"] = null;
+            Session["Lista2"] = null;
             try
             {
                 List<Poliza> List = new List<Poliza>();
+                List<Poliza> List2 = new List<Poliza>();
                 ObjPoliza.Ejercicio = Convert.ToInt32(SesionUsu.Usu_Ejercicio);
                 ObjPoliza.Centro_contable = DDLCentro_Contable.SelectedValue;
                 ObjPoliza.Tipo = ddlTipo2.SelectedValue;
@@ -364,15 +367,33 @@ namespace SAF.Form
                 }
 
                 if (Convert.ToInt32(SesionUsu.Usu_Ejercicio) >= 2022)
-                    CNPoliza.PolizaConsultaGrid_Min(ref ObjPoliza, FechaInicial, FechaFinal, txtBuscar.Text.ToUpper(), SesionUsu.Usu_TipoUsu, ref List);
+                    CNPoliza.PolizaConsultaGrid_Min(ref ObjPoliza, FechaInicial, FechaFinal, txtBuscar.Text.ToUpper(), SesionUsu.Usu_TipoUsu, ref List, ref List2);
                 else
                     CNPoliza.PolizaConsultaGrid(ref ObjPoliza, FechaInicial, FechaFinal, txtBuscar.Text.ToUpper(), SesionUsu.Usu_TipoUsu, ref List);
-                if (List.Count >= 4000)
+
+                if (List2.Count >= 1)
                 {
-                    List = null;
+                    //int totRegs = List.Count - 2500;                    
+                    //divErrorTot.Visible = true;
+                    //Session["Lista1"] = List.GetRange(1, 2500);
+                    //totRegs = 2501 + totRegs;
+                    //totRegs = totRegs - 2;
+                    //List<Poliza> lst2 = new List<Poliza>();
+                    //lst2 = List;
+                    //Session["Lista2"] = lst2.GetRange(2501, 2900);
+
+
                     divErrorTot.Visible = true;
+                    Session["Lista1"] = List;
+                    Session["Lista2"] = List2;
+                }
+                else
+                {
+                    divErrorTot.Visible = false;
+                    Session["Lista1"] = List;
 
                 }
+
                 return List;
             }
             catch (Exception ex)
@@ -751,6 +772,7 @@ namespace SAF.Form
             //CNComun.LlenaCombo("pkg_contabilidad.Obt_Combo_Clasificacion", ref ddlClasifica, "p_tipo_usuario", "p_centro_contable", SesionUsu.Usu_TipoUsu, DDLCentro_Contable.SelectedValue);
             //CNComun.LlenaCombo("pkg_contabilidad.Obt_Combo_Clasificacion", ref ddlClasificaCopia, "p_tipo_usuario", "p_centro_contable", SesionUsu.Usu_TipoUsu, DDLCentro_Contable.SelectedValue);
 
+            divErrorTot.Visible = false;
             if (SesionUsu.Editar == 0 || SesionUsu.Editar == 1)
             {
                 Select_Programa();
@@ -3248,6 +3270,29 @@ namespace SAF.Form
                 }
             }
             catch(Exception ex)
+            {
+                Verificador = ex.Message;
+                CNComun.VerificaTextoMensajeError(ref Verificador);
+                ScriptManager.RegisterStartupScript(this, this.GetType(), UniqueID, "mostrar_modal(0, '" + Verificador + "');", true);
+            }
+        }
+
+        protected void ddlFiltroRegs_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Verificador = string.Empty;
+            try
+            {
+                List<Poliza> lst = new List<Poliza>();
+                if (ddlFiltroRegs.SelectedValue == "1")
+                    lst = (List<Poliza>)Session["Lista1"];
+                else
+                    lst = (List<Poliza>)Session["Lista2"];
+
+
+                grvPolizas.DataSource = lst;
+                grvPolizas.DataBind();
+            }
+            catch (Exception ex)
             {
                 Verificador = ex.Message;
                 CNComun.VerificaTextoMensajeError(ref Verificador);

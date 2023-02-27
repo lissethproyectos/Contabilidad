@@ -8,69 +8,7 @@
     <link href="../../Content/DataTables/css/jquery.dataTables.min.css" rel="stylesheet" />
 
 
-    <style type="text/css">
-        .scrolly {
-            width: 1000px;
-            height: 190px;
-            overflow: auto;
-            overflow-y: hidden;
-            margin: 0 auto;
-            white-space: nowrap
-        }
 
-        .overlay {
-            position: fixed;
-            z-index: 98;
-            top: 0px;
-            left: 0px;
-            right: 0px;
-            bottom: 0px;
-            background-color: #aaa;
-            filter: alpha(opacity=80);
-            opacity: 0.8;
-        }
-
-        .overlayContent {
-            z-index: 99;
-            margin: 250px auto;
-            width: 80px;
-            height: 80px;
-        }
-
-            .overlayContent h2 {
-                font-size: 18px;
-                font-weight: bold;
-                color: #000;
-            }
-
-            .overlayContent img {
-                width: 30px;
-                height: 30px;
-            }
-
-
-        .scroll_monitor2 {
-            /*height: 500px;*/
-            overflow-x: auto;
-        }
-
-
-        .form-control_min {
-    display: block;
-    width: 100%;
-    height: calc(1.5em + 0.75rem + 2px);
-    padding: 0.375rem 0.75rem;
-    font-size: 10px;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #495057;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: 0.25rem;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
-    </style>
     <script type="text/javascript">
 
 
@@ -267,14 +205,6 @@
 
         };
 
-
-        $('select').live('keypress', function (e) {
-            var p = e.which;
-            if (p == 13) {
-                alert('enter was pressed');
-            }
-        });
-
     </script>
 
 
@@ -313,6 +243,17 @@
                                     </asp:UpdatePanel>
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="col text-center">
+                                    <asp:UpdateProgress ID="UpdateProgress5" runat="server" AssociatedUpdatePanelID="UpdatePanel2">
+                                        <ProgressTemplate>
+                                            <asp:Image ID="Image7" runat="server" Height="50px" ImageUrl="http://sysweb.unach.mx/resources/imagenes/ajax_loader_gray_512.gif"
+                                                Width="50px" AlternateText="Espere un momento, por favor.."
+                                                ToolTip="Espere un momento, por favor.." />
+                                        </ProgressTemplate>
+                                    </asp:UpdateProgress>
+                                </div>
+                            </div>
                             <div class="row" id="filaFechas" runat="server" visible="false">
                                 <div class="col-md-2">Fecha</div>
                                 <div class="col-md-2">
@@ -326,7 +267,7 @@
                                     Tipo
                                 </div>
                                 <div class="col-md-2">
-                                    <asp:UpdatePanel ID="UpdatePanel24" runat="server">
+                                    <asp:UpdatePanel ID="updPnlTipo" runat="server">
                                         <ContentTemplate>
                                             <asp:DropDownList ID="ddlTipo0" runat="server" AutoPostBack="True"
                                                 OnSelectedIndexChanged="ddlTipo0_SelectedIndexChanged" CssClass="form-control">
@@ -338,15 +279,15 @@
                                     </asp:UpdatePanel>
                                 </div>
                                 <div class="col-md-1">
-                                    <asp:UpdateProgress ID="updPrgTipo" runat="server"
-                                        AssociatedUpdatePanelID="UpdatePanel24">
-                                        <ProgressTemplate>
-                                            <asp:Image ID="imgPreTipo" runat="server"
-                                                AlternateText="Espere un momento, por favor.." Height="50px"
-                                                ImageUrl="http://sysweb.unach.mx/resources/imagenes/ajax_loader_gray_512.gif"
-                                                ToolTip="Espere un momento, por favor.." Width="50px" />
-                                        </ProgressTemplate>
-                                    </asp:UpdateProgress>
+                                   <asp:UpdateProgress ID="updPgrTipo" runat="server"
+                                    AssociatedUpdatePanelID="updPnlTipo">
+                                    <ProgressTemplate>
+                                        <asp:Image ID="imgTipo" runat="server"
+                                            AlternateText="Espere un momento, por favor.." Height="30px"
+                                            ImageUrl="~/images/ajax_loader_gray_512.gif"
+                                            ToolTip="Espere un momento, por favor.." Width="30px" />
+                                    </ProgressTemplate>
+                                </asp:UpdateProgress>
                                 </div>
                                 <div class="col-md-2">
                                     <asp:Label ID="lblStatus0" runat="server" Text="Status" Visible="False"></asp:Label>
@@ -358,198 +299,178 @@
                                     </asp:DropDownList>
                                 </div>
                             </div>
-                            <div class="row" id="filaFechasBusqueda" runat="server">
-                                <div class="col-sm-2">Mes Inicial</div>
-                                <div class="col-sm-2">
-                                    <asp:UpdatePanel ID="UpdatePanel23" runat="server">
-                                        <ContentTemplate>
-                                            <asp:DropDownList ID="ddlFecha_Ini" runat="server"
-                                                OnSelectedIndexChanged="ddlFecha_Ini_SelectedIndexChanged" onChange="FechaInicio();"
-                                                CssClass="form-control">
-                                                <asp:ListItem Value="00">Apertura</asp:ListItem>
-                                                <asp:ListItem Value="01">Enero</asp:ListItem>
-                                                <asp:ListItem Value="02">Febrero</asp:ListItem>
-                                                <asp:ListItem Value="03">Marzo</asp:ListItem>
-                                                <asp:ListItem Value="04">Abril</asp:ListItem>
-                                                <asp:ListItem Value="05">Mayo</asp:ListItem>
-                                                <asp:ListItem Value="06">Junio</asp:ListItem>
-                                                <asp:ListItem Value="07">Julio</asp:ListItem>
-                                                <asp:ListItem Value="08">Agosto</asp:ListItem>
-                                                <asp:ListItem Value="09">Septiembre</asp:ListItem>
-                                                <asp:ListItem Value="10">Octubre</asp:ListItem>
-                                                <asp:ListItem Value="11">Noviembre</asp:ListItem>
-                                                <asp:ListItem Value="12">Diciembre</asp:ListItem>
-                                                <asp:ListItem Value="13">Cierre</asp:ListItem>
-                                            </asp:DropDownList>
-                                            <br />
-                                            <asp:Label ID="lblRFecha_Ini" runat="server" ForeColor="Red"></asp:Label>
-                                        </ContentTemplate>
-                                    </asp:UpdatePanel>
-                                </div>
-                                <div class="col-sm-1">
-                                    Mes Final
-                                </div>
-                                <div class="col-md-2">
-                                    <asp:UpdatePanel ID="UpdatePanel3" runat="server">
-                                        <ContentTemplate>
-                                            <asp:DropDownList ID="ddlFecha_Fin" runat="server"
-                                                onChange="FechaFinal();" CssClass="form-control">
-                                                <asp:ListItem Value="00">Apertura</asp:ListItem>
-                                                <asp:ListItem Value="01">Enero</asp:ListItem>
-                                                <asp:ListItem Value="02">Febrero</asp:ListItem>
-                                                <asp:ListItem Value="03">Marzo</asp:ListItem>
-                                                <asp:ListItem Value="04">Abril</asp:ListItem>
-                                                <asp:ListItem Value="05">Mayo</asp:ListItem>
-                                                <asp:ListItem Value="06">Junio</asp:ListItem>
-                                                <asp:ListItem Value="07">Julio</asp:ListItem>
-                                                <asp:ListItem Value="08">Agosto</asp:ListItem>
-                                                <asp:ListItem Value="09">Septiembre</asp:ListItem>
-                                                <asp:ListItem Value="10">Octubre</asp:ListItem>
-                                                <asp:ListItem Value="11">Noviembre</asp:ListItem>
-                                                <asp:ListItem Value="12">Diciembre</asp:ListItem>
-                                                <asp:ListItem Value="13">Cierre</asp:ListItem>
-                                            </asp:DropDownList>
-                                            <br />
-                                            <asp:Label ID="lblRFecha_Fin" runat="server" ForeColor="Red"></asp:Label>
-                                        </ContentTemplate>
-                                    </asp:UpdatePanel>
-                                </div>
-                                <div class="col-md-1">
-                                    <asp:Label ID="lblTipo1" runat="server" Text="Tipo"></asp:Label>
-                                </div>
-                                <div class="col-md-1">
-                                    <asp:UpdatePanel ID="UpdatePanel41" runat="server">
-                                        <ContentTemplate>
-                                            <asp:DropDownList ID="ddlTipo2" runat="server" AutoPostBack="True" CssClass="form-control"
-                                                OnSelectedIndexChanged="ddlTipo2_SelectedIndexChanged">
-                                                <asp:ListItem Value="T">Todos</asp:ListItem>
-                                                <asp:ListItem Value="E">Egreso</asp:ListItem>
-                                                <asp:ListItem Value="I">Ingreso</asp:ListItem>
-                                                <asp:ListItem Value="D">Diario</asp:ListItem>
-                                            </asp:DropDownList>
-                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator14" runat="server" ControlToValidate="ddlTipo2" ErrorMessage="*Requerido" InitialValue="T" ValidationGroup="RepLotes"></asp:RequiredFieldValidator>
-                                        </ContentTemplate>
-                                    </asp:UpdatePanel>
-                                </div>
-                                <div class="col-md-1">
-                                    <asp:Label ID="lblStatus2" runat="server" Text="Status"></asp:Label>
-                                </div>
-                                <div class="col-md-2">
-                                    <asp:UpdatePanel ID="UpdatePanel42" runat="server">
-                                        <ContentTemplate>
-                                            <asp:DropDownList ID="ddlStatus2" runat="server" AutoPostBack="True"
-                                                OnSelectedIndexChanged="ddlStatus2_SelectedIndexChanged" CssClass="form-control">
-                                                <asp:ListItem Value="T">Todos</asp:ListItem>
-                                                <asp:ListItem Value="A">Aplicado</asp:ListItem>
-                                                <asp:ListItem Value="N">No Aplicado</asp:ListItem>
-                                            </asp:DropDownList>
-                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="ddlStatus2" ErrorMessage="*Requerido" InitialValue="T" ValidationGroup="RepLotes"></asp:RequiredFieldValidator>
-                                        </ContentTemplate>
-                                    </asp:UpdatePanel>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col text-center">
-                                    <asp:UpdateProgress ID="updPgrFechaIni" runat="server" AssociatedUpdatePanelID="UpdatePanel23">
-                                        <ProgressTemplate>
-                                            <div class="overlay">
-                                                <div class="overlayContent">
-                                                    <asp:Image ID="imgFechaIni" runat="server" Height="100px" ImageUrl="~/images/loader2.gif" Width="100px" />
-                                                </div>
-                                            </div>
-                                        </ProgressTemplate>
-                                    </asp:UpdateProgress>
-                                </div>
-                            </div>
-                            <div class="row" id="filaBusqueda" runat="server">
-                                <div class="col-md-2">Tipo Captura</div>
-                                <div class="col-md-2">
-                                    <asp:DropDownList ID="ddlTipo_CapturaInicio" runat="server" CssClass="form-control">
-                                        <asp:ListItem Value="T">--Todos--</asp:ListItem>
-                                        <asp:ListItem Value="MG">Manual Generada</asp:ListItem>
-                                        <asp:ListItem Value="MC">Manual Capturada</asp:ListItem>
-                                        <asp:ListItem Value="AC">Automática de Cédula</asp:ListItem>
-                                        <asp:ListItem Value="AN">Automática de Nómina</asp:ListItem>
-                                        <asp:ListItem Value="AP">Automática de Presupuesto</asp:ListItem>
-                                        <asp:ListItem Value="AA">Automática de Adecuación</asp:ListItem>
-                                        <asp:ListItem Value="AI">Automática de CHIP</asp:ListItem>
-                                        <asp:ListItem Value="AT">Aplicada Automatica</asp:ListItem>
-                                    </asp:DropDownList>
-                                </div>
-                                <div class="col-md-1">Clasificación</div>
-                                <div class="col-md-2">
-                                    <asp:DropDownList ID="ddlClasificaIni" runat="server" CssClass="form-control">
-                                        <asp:ListItem Value="T">--Todos--</asp:ListItem>
-                                        <asp:ListItem Value="MG">Manual Generada</asp:ListItem>
-                                        <asp:ListItem Value="MC">Manual Capturada</asp:ListItem>
-                                        <asp:ListItem Value="AC">Automática de Cédula</asp:ListItem>
-                                        <asp:ListItem Value="AN">Automática de Nómina</asp:ListItem>
-                                        <asp:ListItem Value="AP">Automática de Presupuesto</asp:ListItem>
-                                        <asp:ListItem Value="AA">Automática de Adecuación</asp:ListItem>
-                                        <asp:ListItem Value="AI">Automática de CHIP</asp:ListItem>
-                                        <asp:ListItem Value="AT">Aplicada Automatica</asp:ListItem>
-                                    </asp:DropDownList>
-                                    <asp:RequiredFieldValidator ID="reqClasificacion" runat="server" ControlToValidate="ddlClasificaIni" ErrorMessage="*Requerido" InitialValue="T" ValidationGroup="RepLotes"></asp:RequiredFieldValidator>
-                                </div>
-                                <div class="col-md-1">Docto</div>
-                                <div class="col-md-1">
-                                    <asp:DropDownList ID="ddlFiltDocto" runat="server" Width="100%" onChange="filtPolizas();" CssClass="form-control">
-                                        <asp:ListItem Value="TODOS">Todos</asp:ListItem>
-                                        <asp:ListItem Value="OFICIO">Oficio</asp:ListItem>
-                                        <asp:ListItem Value="CFDI">Cfdi</asp:ListItem>
-                                        <asp:ListItem Value="AMBOS">Cfdi y Oficio</asp:ListItem>
-                                        <asp:ListItem Value="N">Ninguno</asp:ListItem>
-                                    </asp:DropDownList>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="input-group">
-                                        <asp:TextBox ID="txtBuscar" runat="server" CssClass="form-control" PlaceHolder="# de Póliza/Concepto"></asp:TextBox>
-                                        <div class="input-group-prepend">
-                                            <asp:UpdatePanel ID="UpdatePanel9" runat="server">
-                                                <ContentTemplate>
-                                                    <asp:LinkButton ID="linkBttnBuscar" runat="server" OnClick="linkBttnBuscar_Click" CssClass="btn btn-primary"><i class="fa fa-search" aria-hidden="true"></i> Ver Pólizas</asp:LinkButton>
-                                                </ContentTemplate>
-                                            </asp:UpdatePanel>
-                                        </div>
+                            <div id="filaFechasBusqueda" runat="server">
+                                <div class="row">
+                                    <div class="col-sm-2">Mes Inicial</div>
+                                    <div class="col-sm-2">
+                                        <asp:UpdatePanel ID="UpdatePanel23" runat="server">
+                                            <ContentTemplate>
+                                                <asp:DropDownList ID="ddlFecha_Ini" runat="server"
+                                                    OnSelectedIndexChanged="ddlFecha_Ini_SelectedIndexChanged" onChange="FechaInicio();"
+                                                    CssClass="form-control">
+                                                    <asp:ListItem Value="00">Apertura</asp:ListItem>
+                                                    <asp:ListItem Value="01">Enero</asp:ListItem>
+                                                    <asp:ListItem Value="02">Febrero</asp:ListItem>
+                                                    <asp:ListItem Value="03">Marzo</asp:ListItem>
+                                                    <asp:ListItem Value="04">Abril</asp:ListItem>
+                                                    <asp:ListItem Value="05">Mayo</asp:ListItem>
+                                                    <asp:ListItem Value="06">Junio</asp:ListItem>
+                                                    <asp:ListItem Value="07">Julio</asp:ListItem>
+                                                    <asp:ListItem Value="08">Agosto</asp:ListItem>
+                                                    <asp:ListItem Value="09">Septiembre</asp:ListItem>
+                                                    <asp:ListItem Value="10">Octubre</asp:ListItem>
+                                                    <asp:ListItem Value="11">Noviembre</asp:ListItem>
+                                                    <asp:ListItem Value="12">Diciembre</asp:ListItem>
+                                                    <asp:ListItem Value="13">Cierre</asp:ListItem>
+                                                </asp:DropDownList>
+                                                <br />
+                                                <asp:Label ID="lblRFecha_Ini" runat="server" ForeColor="Red"></asp:Label>
+                                            </ContentTemplate>
+                                        </asp:UpdatePanel>
+                                    </div>
+                                    <div class="col-sm-1">
+                                        Mes Final
+                                    </div>
+                                    <div class="col-md-2">
+                                        <asp:UpdatePanel ID="UpdatePanel3" runat="server">
+                                            <ContentTemplate>
+                                                <asp:DropDownList ID="ddlFecha_Fin" runat="server"
+                                                    onChange="FechaFinal();" CssClass="form-control">
+                                                    <asp:ListItem Value="00">Apertura</asp:ListItem>
+                                                    <asp:ListItem Value="01">Enero</asp:ListItem>
+                                                    <asp:ListItem Value="02">Febrero</asp:ListItem>
+                                                    <asp:ListItem Value="03">Marzo</asp:ListItem>
+                                                    <asp:ListItem Value="04">Abril</asp:ListItem>
+                                                    <asp:ListItem Value="05">Mayo</asp:ListItem>
+                                                    <asp:ListItem Value="06">Junio</asp:ListItem>
+                                                    <asp:ListItem Value="07">Julio</asp:ListItem>
+                                                    <asp:ListItem Value="08">Agosto</asp:ListItem>
+                                                    <asp:ListItem Value="09">Septiembre</asp:ListItem>
+                                                    <asp:ListItem Value="10">Octubre</asp:ListItem>
+                                                    <asp:ListItem Value="11">Noviembre</asp:ListItem>
+                                                    <asp:ListItem Value="12">Diciembre</asp:ListItem>
+                                                    <asp:ListItem Value="13">Cierre</asp:ListItem>
+                                                </asp:DropDownList>
+                                                <br />
+                                                <asp:Label ID="lblRFecha_Fin" runat="server" ForeColor="Red"></asp:Label>
+                                            </ContentTemplate>
+                                        </asp:UpdatePanel>
+                                    </div>
+                                    <div class="col-md-1">
+                                        <asp:Label ID="lblTipo1" runat="server" Text="Tipo"></asp:Label>
+                                    </div>
+                                    <div class="col-md-1">
+                                        <asp:UpdatePanel ID="UpdatePanel41" runat="server">
+                                            <ContentTemplate>
+                                                <asp:DropDownList ID="ddlTipo2" runat="server" AutoPostBack="True" CssClass="form-control"
+                                                    OnSelectedIndexChanged="ddlTipo2_SelectedIndexChanged">
+                                                    <asp:ListItem Value="T">Todos</asp:ListItem>
+                                                    <asp:ListItem Value="E">Egreso</asp:ListItem>
+                                                    <asp:ListItem Value="I">Ingreso</asp:ListItem>
+                                                    <asp:ListItem Value="D">Diario</asp:ListItem>
+                                                </asp:DropDownList>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator14" runat="server" ControlToValidate="ddlTipo2" ErrorMessage="*Requerido" InitialValue="T" ValidationGroup="RepLotes"></asp:RequiredFieldValidator>
+                                            </ContentTemplate>
+                                        </asp:UpdatePanel>
+                                    </div>
+                                    <div class="col-md-1">
+                                        <asp:Label ID="lblStatus2" runat="server" Text="Status"></asp:Label>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <asp:UpdatePanel ID="UpdatePanel42" runat="server">
+                                            <ContentTemplate>
+                                                <asp:DropDownList ID="ddlStatus2" runat="server" AutoPostBack="True"
+                                                    OnSelectedIndexChanged="ddlStatus2_SelectedIndexChanged" CssClass="form-control">
+                                                    <asp:ListItem Value="T">Todos</asp:ListItem>
+                                                    <asp:ListItem Value="A">Aplicado</asp:ListItem>
+                                                    <asp:ListItem Value="N">No Aplicado</asp:ListItem>
+                                                </asp:DropDownList>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="ddlStatus2" ErrorMessage="*Requerido" InitialValue="T" ValidationGroup="RepLotes"></asp:RequiredFieldValidator>
+                                            </ContentTemplate>
+                                        </asp:UpdatePanel>
                                     </div>
                                 </div>
+                                <div class="row">
+                                    <div class="col text-center">
+                                        <asp:UpdateProgress ID="updPgrFechaIni" runat="server" AssociatedUpdatePanelID="UpdatePanel23">
+                                            <ProgressTemplate>
+                                                <div class="overlay">
+                                                    <div class="overlayContent">
+                                                        <asp:Image ID="imgFechaIni" runat="server" Height="50px" ImageUrl="~/images/loader2.gif" Width="50px" />
+                                                    </div>
+                                                </div>
+                                            </ProgressTemplate>
+                                        </asp:UpdateProgress>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="filaBusqueda" runat="server">
+                                <div class="row">
+                                    <div class="col-md-2">Tipo Captura</div>
+                                    <div class="col-md-2">
+                                        <asp:DropDownList ID="ddlTipo_CapturaInicio" runat="server" CssClass="form-control">
+                                            <asp:ListItem Value="T">--Todos--</asp:ListItem>
+                                            <asp:ListItem Value="MG">Manual Generada</asp:ListItem>
+                                            <asp:ListItem Value="MC">Manual Capturada</asp:ListItem>
+                                            <asp:ListItem Value="AC">Automática de Cédula</asp:ListItem>
+                                            <asp:ListItem Value="AN">Automática de Nómina</asp:ListItem>
+                                            <asp:ListItem Value="AP">Automática de Presupuesto</asp:ListItem>
+                                            <asp:ListItem Value="AA">Automática de Adecuación</asp:ListItem>
+                                            <asp:ListItem Value="AI">Automática de CHIP</asp:ListItem>
+                                            <asp:ListItem Value="AT">Aplicada Automatica</asp:ListItem>
+                                        </asp:DropDownList>
+                                    </div>
+                                    <div class="col-md-1">Clasificación</div>
+                                    <div class="col-md-2">
+                                        <asp:DropDownList ID="ddlClasificaIni" runat="server" CssClass="form-control">
+                                            <asp:ListItem Value="T">--Todos--</asp:ListItem>
+                                            <asp:ListItem Value="MG">Manual Generada</asp:ListItem>
+                                            <asp:ListItem Value="MC">Manual Capturada</asp:ListItem>
+                                            <asp:ListItem Value="AC">Automática de Cédula</asp:ListItem>
+                                            <asp:ListItem Value="AN">Automática de Nómina</asp:ListItem>
+                                            <asp:ListItem Value="AP">Automática de Presupuesto</asp:ListItem>
+                                            <asp:ListItem Value="AA">Automática de Adecuación</asp:ListItem>
+                                            <asp:ListItem Value="AI">Automática de CHIP</asp:ListItem>
+                                            <asp:ListItem Value="AT">Aplicada Automatica</asp:ListItem>
+                                        </asp:DropDownList>
+                                        <asp:RequiredFieldValidator ID="reqClasificacion" runat="server" ControlToValidate="ddlClasificaIni" ErrorMessage="*Requerido" InitialValue="T" ValidationGroup="RepLotes"></asp:RequiredFieldValidator>
+                                    </div>
+                                    <div class="col-md-1">Docto</div>
+                                    <div class="col-md-1">
+                                        <asp:DropDownList ID="ddlFiltDocto" runat="server" Width="100%" onChange="filtPolizas();" CssClass="form-control">
+                                            <asp:ListItem Value="TODOS">Todos</asp:ListItem>
+                                            <asp:ListItem Value="OFICIO">Oficio</asp:ListItem>
+                                            <asp:ListItem Value="CFDI">Cfdi</asp:ListItem>
+                                            <asp:ListItem Value="AMBOS">Cfdi y Oficio</asp:ListItem>
+                                            <asp:ListItem Value="N">Ninguno</asp:ListItem>
+                                        </asp:DropDownList>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="input-group">
+                                            <asp:TextBox ID="txtBuscar" runat="server" CssClass="form-control" PlaceHolder="# de Póliza/Concepto"></asp:TextBox>
+                                            <div class="input-group-prepend">
+                                                <asp:UpdatePanel ID="UpdatePanel9" runat="server">
+                                                    <ContentTemplate>
+                                                        <asp:LinkButton ID="linkBttnBuscar" runat="server" OnClick="linkBttnBuscar_Click" CssClass="btn btn-primary"><i class="fa fa-search" aria-hidden="true"></i> Ver Pólizas</asp:LinkButton>
+                                                    </ContentTemplate>
+                                                </asp:UpdatePanel>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                            </div>
-                            <div class="row">
-                                <div class="col text-center">
-                                    <asp:UpdateProgress ID="updPrgBuscar" runat="server" AssociatedUpdatePanelID="UpdatePanel9">
-                                        <ProgressTemplate>
-                                            <div class="overlay">
-                                                <div class="overlayContent">
-                                                    <asp:Image ID="img3" runat="server" Height="100px" ImageUrl="~/images/loader2.gif" Width="100px" />
-                                                </div>
-                                            </div>
-                                        </ProgressTemplate>
-                                    </asp:UpdateProgress>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col text-center">
-                                    <asp:UpdateProgress ID="UpdateProgress5" runat="server" AssociatedUpdatePanelID="UpdatePanel2">
-                                        <ProgressTemplate>
-                                            <asp:Image ID="Image7" runat="server" Height="50px" ImageUrl="http://sysweb.unach.mx/resources/imagenes/ajax_loader_gray_512.gif"
-                                                Width="50px" AlternateText="Espere un momento, por favor.."
-                                                ToolTip="Espere un momento, por favor.." />
-                                        </ProgressTemplate>
-                                    </asp:UpdateProgress>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col text-center">
-                                    <asp:UpdateProgress ID="UpdateProgress3" runat="server" AssociatedUpdatePanelID="UpdatePanel10">
-                                        <ProgressTemplate>
-                                            <div class="overlay">
-                                                <div class="overlayContent">
-                                                    <asp:Image ID="img1" runat="server" Height="100px" ImageUrl="~/images/loader2.gif" Width="100px" />
+                                <div class="row">
+                                    <div class="col text-center">
+                                        <asp:UpdateProgress ID="updPrgBuscar" runat="server" AssociatedUpdatePanelID="UpdatePanel9">
+                                            <ProgressTemplate>
+                                                <div class="overlay">
+                                                    <div class="overlayContent">
+                                                        <asp:Image ID="img3" runat="server" Height="50px" ImageUrl="~/images/loader2.gif" Width="50px" />
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </ProgressTemplate>
-                                    </asp:UpdateProgress>
+                                            </ProgressTemplate>
+                                        </asp:UpdateProgress>
+                                    </div>
                                 </div>
                             </div>
                             <div class="row">
@@ -558,7 +479,7 @@
                                         <ProgressTemplate>
                                             <div class="overlay">
                                                 <div class="overlayContent">
-                                                    <asp:Image ID="img2" runat="server" Height="100px" ImageUrl="~/images/loader2.gif" Width="100px" />
+                                                    <asp:Image ID="img2" runat="server" Height="50px" ImageUrl="~/images/loader2.gif" Width="50px" />
                                                 </div>
                                             </div>
                                         </ProgressTemplate>
@@ -571,13 +492,32 @@
             </div>
         </div>
         <div class="row">
+            <div class="col text-center">
+                <asp:UpdateProgress ID="UpdateProgress3" runat="server" AssociatedUpdatePanelID="UpdatePanel10">
+                    <ProgressTemplate>
+                        <div class="overlay">
+                            <div class="overlayContent">
+                                <asp:Image ID="img1" runat="server" Height="50px" ImageUrl="~/images/loader2.gif" Width="50px" />
+                            </div>
+                        </div>
+                    </ProgressTemplate>
+                </asp:UpdateProgress>
+            </div>
+        </div>
+        <div class="row">
             <div class="col">
                 <asp:UpdatePanel ID="UpdatePanel10" runat="server">
                     <ContentTemplate>
                         <asp:MultiView ID="MultiView1" runat="server">
                             <asp:View ID="View1" runat="server">
                                 <div class="row alert alert-danger" runat="server" id="divErrorTot" visible="false">
-                                    <div class="col">La consulta excede los 4000 registros, favor de realizar filtros para un correcto funcionamiento.</div>
+                                    <div class="col-md-4">
+                                        <asp:DropDownList ID="ddlFiltroRegs" runat="server" CssClass="form-control" AutoPostBack="True" OnSelectedIndexChanged="ddlFiltroRegs_SelectedIndexChanged">
+                                            <asp:ListItem Value="1">1 a 2500 registros</asp:ListItem>
+                                            <asp:ListItem Value="2">2501 a 5000 registros</asp:ListItem>
+                                        </asp:DropDownList>
+                                    </div>
+                                    <div class="col-md-8">La consulta excede los 2500 registros, favor de realizar filtros para un correcto funcionamiento.</div>
                                 </div>
                                 <div class="row">
                                     <div class="col">
@@ -737,9 +677,7 @@
                                                 <AlternatingRowStyle CssClass="alt" />
                                             </asp:GridView>
                                         </div>
-                                        <%--<asp:HiddenField ID="hddnModalOficios" runat="server" />--%>
                                         <asp:HiddenField ID="hddnModalCopia" runat="server" />
-                                        <%--<ajaxToolkit:ModalPopupExtender ID="modalOficios" runat="server" TargetControlID="hddnModalOficios" BackgroundCssClass="modalBackground_Proy" PopupControlID="pnlOficios" CancelControlID="bttnSalirModal"></ajaxToolkit:ModalPopupExtender>--%>
                                         <ajaxToolkit:ModalPopupExtender ID="modalCopia" runat="server" TargetControlID="hddnModalCopia" BackgroundCssClass="modalBackground_Proy" PopupControlID="pnlCopiaPoliza" CancelControlID="btnCancelarCopia"></ajaxToolkit:ModalPopupExtender>
                                     </div>
                                 </div>
@@ -864,98 +802,6 @@
                                         </ContentTemplate>
                                     </asp:UpdatePanel>
                                 </asp:Panel>
-                                <%--<asp:Panel ID="pnlOficios" runat="server" CssClass="TituloModalPopupMsg">
-                                    <asp:UpdatePanel ID="upModal" runat="server" ChildrenAsTriggers="false" UpdateMode="Conditional">
-                                        <ContentTemplate>
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="exampleModalLabel">Oficios</h5>
-                                                    <asp:LinkButton ID="linkBttnCerrarModal" runat="server" OnClick="linkBttnCerrarModal_Click"><span aria-hidden="true">&times;</span></asp:LinkButton>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <div class="card wizard-card ct-wizard-orange">
-                                                        <br />
-                                                        <div class="container">
-                                                            <div class="row">
-                                                                <div class="col-md-2">
-                                                                    # Oficio
-                                                                </div>
-                                                                <div class="col-md-3">
-                                                                    <asp:TextBox ID="txtOficio" runat="server" Width="80px"></asp:TextBox>
-                                                                </div>
-                                                                <div class="col-md-2">
-                                                                    Fecha
-                                                                </div>
-                                                                <div class="col-md-5">
-                                                                    <asp:TextBox ID="txtFechaOficio" runat="server" Enabled="False" Width="80%"></asp:TextBox>
-                                                                    <ajaxToolkit:CalendarExtender ID="CalendarFecha_Oficio" runat="server" TargetControlID="txtFechaOficio" PopupButtonID="imgCalendarioOficio" />
-                                                                    <asp:ImageButton ID="imgCalendarioOficio" runat="server" ImageUrl="https://sysweb.unach.mx/resources/imagenes/calendario.gif" />
-
-
-                                                                </div>
-                                                            </div>
-                                                            <div class="row">
-                                                                <div class="col-md-10">
-                                                                    <div class="custom-file">
-                                                                        <asp:FileUpload ID="FileOficio" runat="server" class="form-control" Height="40px" Width="100%" />
-                                                                    </div>
-
-                                                                </div>
-                                                                <div class="col-md-2">
-
-                                                                    <asp:Button ID="bttnAgregarOficio" runat="server" Text="Agregar" CssClass="btn btn-blue-grey" OnClick="bttnAgregarOficio_Click" />
-
-                                                                </div>
-                                                            </div>
-                                                            <div class="row">
-                                                                <div class="col text-center">
-                                                                    <asp:UpdatePanel ID="UpdatePanel6" runat="server">
-                                                                        <ContentTemplate>
-                                                                            <asp:GridView ID="grdOficios" runat="server" AutoGenerateColumns="False" CssClass="mGrid" Width="100%" EmptyDataText="No existen oficios para esta póliza." ShowFooter="True" ShowHeaderWhenEmpty="True" OnRowDeleting="grdOficios_RowDeleting">
-                                                                                <Columns>
-                                                                                    <asp:BoundField DataField="numero_oficio" HeaderText="# de Oficio" />
-                                                                                    <asp:BoundField DataField="fecha_oficio" HeaderText="Fecha Oficio" />
-                                                                                    <asp:HyperLinkField HeaderText="Oficio" />
-                                                                                    <asp:TemplateField>
-                                                                                        <ItemTemplate>
-                                                                                            <asp:HyperLink ID="linkArchivoOficio" runat="server" NavigateUrl='<%# Bind("Ruta_Oficio") %>' Target="_blank">Ver</asp:HyperLink>
-                                                                                        </ItemTemplate>
-                                                                                    </asp:TemplateField>
-                                                                                    <asp:CommandField ShowDeleteButton="True" />
-                                                                                </Columns>
-                                                                                <FooterStyle CssClass="enc" />
-                                                                                <HeaderStyle CssClass="enc" />
-                                                                                <PagerStyle CssClass="enc" HorizontalAlign="Center" />
-                                                                                <SelectedRowStyle CssClass="sel" />
-                                                                            </asp:GridView>
-                                                                        </ContentTemplate>
-                                                                    </asp:UpdatePanel>
-                                                                </div>
-                                                            </div>
-                                                            <div class="row">
-                                                                <div class="col alert alert-danger">
-                                                                    <asp:Label ID="lblMjErrorOficio" runat="server" Text=""></asp:Label>
-                                                                </div>
-                                                            </div>
-                                                            <br />
-                                                        </div>
-
-
-                                                        <br />
-                                                    </div>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <asp:Button ID="bttnSalirModal" runat="server" Text="Salir" CssClass="btn btn-blue-grey" />
-                                                    &nbsp;<asp:Button ID="bttnGuardarOficio" runat="server" CssClass="btn btn-primary" Text="Guardar" OnClick="bttnGuardarOficio_Click" />
-
-                                                </div>
-                                            </div>
-                                        </ContentTemplate>
-                                        <Triggers>
-                                            <asp:PostBackTrigger ControlID="bttnAgregarOficio" />
-                                        </Triggers>
-                                    </asp:UpdatePanel>
-                                </asp:Panel>--%>
                             </asp:View>
                             <asp:View ID="View2" runat="server">
                                 <div class="container-fluid">
@@ -965,21 +811,8 @@
                                                 CssClass="ajax__myTab" Width="100%">
                                                 <ajaxToolkit:TabPanel ID="TabPanel1" runat="server" HeaderText="TabPanel1">
                                                     <HeaderTemplate>
-                                                        Información Gral.   
-                                                    
+                                                        Información Gral.                                                       
                                                     </HeaderTemplate>
-
-
-
-
-
-
-
-
-
-
-
-
                                                     <ContentTemplate>
                                                         <div class="container-fluid">
                                                             <div class="row" id="rowCFDI" runat="server">
@@ -1168,38 +1001,12 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-
                                                     </ContentTemplate>
-
-
-
-
-
-
-
-
-
-
-
-
                                                 </ajaxToolkit:TabPanel>
                                                 <ajaxToolkit:TabPanel ID="TabPanel2" runat="server" HeaderText="Detalle">
                                                     <HeaderTemplate>
-                                                        Detalle
-                                                    
+                                                        Detalle                                                    
                                                     </HeaderTemplate>
-
-
-
-
-
-
-
-
-
-
-
-
                                                     <ContentTemplate>
                                                         <div class="container-fluid">
                                                             <div class="row">
@@ -1210,55 +1017,19 @@
                                                                     <asp:TextBox ID="txtSearch" runat="server" AutoPostBack="True"
                                                                         onkeyup="RefreshUpdatePanel();"
                                                                         OnTextChanged="txtSearch_TextChanged" Width="98%"></asp:TextBox>
-
-
-
-
-
-
-
-
-
-
-
-
                                                                     <asp:UpdatePanel ID="UpdatePanel22" runat="server">
                                                                         <ContentTemplate>
                                                                             <asp:ListBox ID="ddlCuentas_Contables" runat="server"
                                                                                 onkeypress="if (event.keyCode==13) return false;"
                                                                                 Width="98%"></asp:ListBox>
-
                                                                         </ContentTemplate>
                                                                         <Triggers>
                                                                             <asp:AsyncPostBackTrigger ControlID="txtSearch"></asp:AsyncPostBackTrigger>
                                                                         </Triggers>
                                                                     </asp:UpdatePanel>
-
-
-
-
-
-
-
-
-
-
-
-
                                                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server"
                                                                         ControlToValidate="ddlCuentas_Contables" ErrorMessage="*Cuenta Contable"
                                                                         ValidationGroup="Detalle">*Requerido</asp:RequiredFieldValidator>
-
-
-
-
-
-
-
-
-
-
-
 
                                                                 </div>
                                                             </div>
@@ -1267,214 +1038,46 @@
                                                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server"
                                                                         ControlToValidate="ddlCuentas_Contables" ErrorMessage="*Cuenta Contable"
                                                                         ValidationGroup="Detalle">*Requerido</asp:RequiredFieldValidator>
-
-
-
-
-
-
-
-
-
-
-
-
                                                                 </div>
                                                             </div>
                                                             <div class="row">
                                                                 <div class="col-md-2">Cargo</div>
                                                                 <div class="col-md-2">
                                                                     <asp:TextBox ID="txtCargo" runat="server" onKeyDown="return enter_abono(event);" onkeyup="mascara(this,'C');">0</asp:TextBox>
-
-
-
-
-
-
-
-
-
-
-
-
                                                                 </div>
                                                                 <div class="col-md-1">
                                                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtCargo" ErrorMessage="*Cargo" ValidationGroup="Detalle">*Requerido</asp:RequiredFieldValidator>
-
-
-
-
-
-
-
-
-
-
-
-
                                                                     <br />
                                                                     <asp:RegularExpressionValidator ID="RegularExpressionValidator104" runat="server" ControlToValidate="txtCargo" SetFocusOnError="True" ValidationExpression="^-?([0-9]{1,3},([0-9]{3},)*[0-9]{3}|[0-9]+)(.[0-9]{0,2})?$" ValidationGroup="Detalle">*Formato (999,999,999.99)</asp:RegularExpressionValidator>
-
-
-
-
-
-
-
-
-
-
-
-
                                                                 </div>
                                                                 <div class="col-md-2">
                                                                     Abono
                                                                 </div>
                                                                 <div class="col-md-2">
                                                                     <asp:TextBox ID="txtAbono" runat="server" onKeyDown="return enter_boton(event);" onkeyup="mascara(this,'A');" OnTextChanged="txtAbono_TextChanged">0</asp:TextBox>
-
-
-
-
-
-
-
-
-
-
-
-
                                                                 </div>
                                                                 <div class="col-md-1">
                                                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtAbono" ErrorMessage="*Abono" ValidationGroup="Detalle">*Requerido</asp:RequiredFieldValidator>
-
-
-
-
-
-
-
-
-
-
-
-
                                                                     <br />
                                                                     <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="txtAbono" SetFocusOnError="True" ValidationExpression="^-?([0-9]{1,3},([0-9]{3},)*[0-9]{3}|[0-9]+)(.[0-9]{0,2})?$" ValidationGroup="Detalle">*Formato (999,999,999.99) 
                                                                                                                     Números</asp:RegularExpressionValidator>
-
-
-
-
-
-
-
-
-
-
-
-
                                                                 </div>
                                                                 <div class="col-md-2">
                                                                     <asp:Button ID="bttnAgregar" runat="server" CssClass="btn btn-info" OnClick="bttnAgregar_Click" Text="Agregar" />
-
-
-
-
-
-
-
-
-
-
-
-
                                                                 </div>
                                                             </div>
                                                             <div class="row alert alert-warning">
                                                                 <div class="col-md-6 text-center">
                                                                     <asp:Label ID="lblLeyTotal_Cargos" runat="server" Font-Bold="True" Text="TOTAL CARGOS"></asp:Label>
-
-
-
-
-
-
-
-
-
-
-
-
                                                                     <asp:Label ID="lblFormatoTotal_Cargos" runat="server" Font-Bold="True" Font-Size="Large" Text="0"></asp:Label>
-
-
-
-
-
-
-
-
-
-
-
-
                                                                     <br />
                                                                     <asp:Label ID="lblTotal_Cargos" runat="server" Visible="False"></asp:Label>
-
-
-
-
-
-
-
-
-
-
-
-
                                                                 </div>
                                                                 <div class="col-md-6 text-center">
                                                                     <asp:Label ID="lblLeyTotal_Abonos" runat="server" Font-Bold="True" Text="TOTAL ABONOS"></asp:Label>
-
-
-
-
-
-
-
-
-
-
-
-
                                                                     <asp:Label ID="lblFormatoTotal_Abonos" runat="server" Font-Bold="True" Font-Size="Large" Text="0"></asp:Label>
-
-
-
-
-
-
-
-
-
-
-
-
                                                                     <br />
                                                                     <asp:Label ID="lblTotal_Abonos" runat="server" Visible="False"></asp:Label>
-
-
-
-
-
-
-
-
-
-
-
-
                                                                 </div>
                                                             </div>
                                                             <div class="row">
@@ -1499,45 +1102,15 @@
                                                                             <asp:CommandField ShowDeleteButton="True" />
                                                                             <asp:CommandField ShowEditButton="True" />
                                                                         </Columns>
-
                                                                         <FooterStyle CssClass="enc" />
-
                                                                         <HeaderStyle CssClass="enc" />
-
                                                                         <PagerStyle CssClass="enc" HorizontalAlign="Center" />
-
                                                                         <SelectedRowStyle CssClass="sel" />
                                                                     </asp:GridView>
-
-
-
-
-
-
-
-
-
-
-
-
                                                                 </div>
                                                             </div>
                                                         </div>
-
-
                                                     </ContentTemplate>
-
-
-
-
-
-
-
-
-
-
-
-
                                                 </ajaxToolkit:TabPanel>
                                             </ajaxToolkit:TabContainer>
                                         </div>
@@ -1552,12 +1125,8 @@
                                             <asp:Button ID="btnCancelar" runat="server" CausesValidation="False" CssClass="btn btn-blue-grey" OnClick="btnCancelar_Click" Text="Cancelar" />
                                             &nbsp;<asp:Button ID="btnGuardar" runat="server" CssClass="btn btn-primary" OnClick="Button1_Click1" Text="Guardar" ValidationGroup="Poliza" />
                                             <asp:HiddenField ID="hhdnGuardar" runat="server" />
-                                            <%--<ajaxToolkit:ModalPopupExtender ID="modalGuardar" runat="server" BackgroundCssClass="modalBackground_Proy" PopupControlID="pnlGuardar" TargetControlID="hhdnGuardar">
-                                            </ajaxToolkit:ModalPopupExtender>--%>
                                         </div>
                                     </div>
-
-
                                 </div>
                             </asp:View>
                             <asp:View ID="View3" runat="server">
@@ -1721,9 +1290,6 @@
                                                 <div class="col-md-1">
                                                     <asp:RequiredFieldValidator ID="reqCFDI_Total" runat="server" ErrorMessage="* Monto" ControlToValidate="txtCFDI_Total" Text="*" ValidationGroup="CFDI"></asp:RequiredFieldValidator>
                                                 </div>
-
-
-
                                                 <div class="col-md-8">
                                                     <asp:UpdatePanel ID="UpdatePanel20" runat="server">
                                                         <ContentTemplate>
@@ -1755,31 +1321,7 @@
                                                 <div class="col">
                                                     <asp:ValidationSummary ID="valDatosoficio" runat="server" ValidationGroup="CFDI" ShowMessageBox="False" HeaderText="Estos datos son requeridos, favor de verificar" />
                                                 </div>
-                                            </div>
-                                            <%--<asp:UpdatePanel ID="UpdatePanel20" runat="server">
-                                                <ContentTemplate>
-                                                    <div class="row">
-                                                        <div class="col-md-1">Oficio</div>
-                                                        <div class="col-md-4 mb-3">
-                                                            <div class="input-group mb-3">
-                                                                <div class="custom-file input-group-text" style="background-color: #ffffff">
-                                                                    <asp:FileUpload ID="fileOficioFactura" runat="server" Height="40px" Width="100%" />
-                                                                </div>
-                                                                <div class="input-group-prepend">
-                                                                    <asp:LinkButton ID="linkBttnOficioFact" runat="server" ValidationGroup="CFDI" OnClick="linkBttnOficioFact_Click" CssClass="input-group-text"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i>Adjuntar</asp:LinkButton>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-2">
-                                                            <asp:RequiredFieldValidator ID="reqOficioFactura" runat="server" ErrorMessage="*Archivo Constancia" ControlToValidate="fileOficioFactura" Text="* Requerido" ValidationGroup="CFDI"></asp:RequiredFieldValidator>
-                                                            <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ControlToValidate="fileOficioFactura" ErrorMessage="Archivo incorrecto, debe ser un PDF" ValidationExpression="(.*?)\.(pdf|PDF)$" ValidationGroup="CFDI"></asp:RegularExpressionValidator>
-                                                        </div>
-                                                    </div>
-                                                </ContentTemplate>
-                                                <Triggers>
-                                                    <asp:PostBackTrigger ControlID="linkBttnOficioFact" />
-                                                </Triggers>
-                                            </asp:UpdatePanel>--%>
+                                            </div>                                            
                                         </div>
                                         <div class="row" id="divFacturas" runat="server">
                                             <div class="col-md-5">

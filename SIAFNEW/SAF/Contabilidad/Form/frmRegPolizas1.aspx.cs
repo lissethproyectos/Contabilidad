@@ -362,6 +362,7 @@ namespace SAF.Form
             try
             {
                 List<Poliza> List = new List<Poliza>();
+                List<Poliza> List2 = new List<Poliza>();
                 ObjPoliza.Ejercicio = Convert.ToInt32(SesionUsu.Usu_Ejercicio);
                 ObjPoliza.Centro_contable = DDLCentro_Contable.SelectedValue;
                 ObjPoliza.Tipo = ddlTipo2.SelectedValue;
@@ -386,7 +387,7 @@ namespace SAF.Form
                 }
 
                 if (Convert.ToInt32(SesionUsu.Usu_Ejercicio) >= 2022)
-                    CNPoliza.PolizaConsultaGrid_Min(ref ObjPoliza, FechaInicial, FechaFinal, txtBuscar.Text.ToUpper(), SesionUsu.Usu_TipoUsu, ref List);
+                    CNPoliza.PolizaConsultaGrid_Min(ref ObjPoliza, FechaInicial, FechaFinal, txtBuscar.Text.ToUpper(), SesionUsu.Usu_TipoUsu, ref List, ref List2);
                 else
                     CNPoliza.PolizaConsultaGrid(ref ObjPoliza, FechaInicial, FechaFinal, txtBuscar.Text.ToUpper(), SesionUsu.Usu_TipoUsu, ref List);
                 if (List.Count >= 4000)

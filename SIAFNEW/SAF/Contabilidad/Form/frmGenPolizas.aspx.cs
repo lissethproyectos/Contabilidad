@@ -10,6 +10,7 @@ using System.Web.UI.WebControls;
 
 namespace SAF.Contabilidad.Form
 {
+
     public partial class frmGenPolizas : System.Web.UI.Page
     {
 

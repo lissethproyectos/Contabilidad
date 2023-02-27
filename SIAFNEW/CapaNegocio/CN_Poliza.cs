@@ -67,12 +67,12 @@ namespace CapaNegocio
                 throw new Exception(ex.Message);
             }
         }
-        public void PolizaConsultaGrid_Min(ref Poliza ObjPoliza, String FechaInicial, String FechaFinal, String Buscar, String TipoUsu, ref List<Poliza> List)
+        public void PolizaConsultaGrid_Min(ref Poliza ObjPoliza, String FechaInicial, String FechaFinal, String Buscar, String TipoUsu, ref List<Poliza> List, ref List<Poliza> List2)
         {
             try
             {
                 CD_Poliza CDPoliza = new CD_Poliza();
-                CDPoliza.PolizaConsultaGrid_Min(ref ObjPoliza, FechaInicial, FechaFinal, Buscar, TipoUsu, ref List);
+                CDPoliza.PolizaConsultaGrid_Min(ref ObjPoliza, FechaInicial, FechaFinal, Buscar, TipoUsu, ref List, ref List2);
 
             }
             catch (Exception ex)
