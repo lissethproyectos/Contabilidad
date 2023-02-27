@@ -19,7 +19,7 @@
     <script src="https://sysweb.unach.mx/ingresos/bootstrap/js/bootstrap.js"></script>
     <script src="../../bootstrap/js/bootstrap.min.js"></script>
     <script src="../../Scripts/bootbox.min.js"></script>
-    <script src="../../Scripts/popper.js"></script>
+<%--    <script src="../../Scripts/popper.js"></script>--%>
 
     <%--PARA EL POP UP--%>
     <script type="text/javascript" src="https://sysweb.unach.mx/resources/js/index.js" charset="iso-8859-1"></script>

@@ -87,6 +87,15 @@ namespace SAF.Form
         protected global::System.Web.UI.WebControls.LinkButton linkBttnNuevo;
 
         /// <summary>
+        /// Control UpdateProgress5.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.UpdateProgress UpdateProgress5;
+
+        /// <summary>
         /// Control filaFechas.
         /// </summary>
         /// <remarks>
@@ -132,13 +141,13 @@ namespace SAF.Form
         protected global::System.Web.UI.WebControls.Label lblRFecha;
 
         /// <summary>
-        /// Control UpdatePanel24.
+        /// Control updPnlTipo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UpdatePanel24;
+        protected global::System.Web.UI.UpdatePanel updPnlTipo;
 
         /// <summary>
         /// Control ddlTipo0.
@@ -150,13 +159,13 @@ namespace SAF.Form
         protected global::System.Web.UI.WebControls.DropDownList ddlTipo0;
 
         /// <summary>
-        /// Control updPrgTipo.
+        /// Control updPgrTipo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.UpdateProgress updPrgTipo;
+        protected global::System.Web.UI.UpdateProgress updPgrTipo;
 
         /// <summary>
         /// Control lblStatus0.
@@ -402,13 +411,13 @@ namespace SAF.Form
         protected global::System.Web.UI.UpdateProgress updPrgBuscar;
 
         /// <summary>
-        /// Control UpdateProgress5.
+        /// Control UpdateProgress1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.UpdateProgress UpdateProgress5;
+        protected global::System.Web.UI.UpdateProgress UpdateProgress1;
 
         /// <summary>
         /// Control UpdateProgress3.
@@ -418,15 +427,6 @@ namespace SAF.Form
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.UpdateProgress UpdateProgress3;
-
-        /// <summary>
-        /// Control UpdateProgress1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.UpdateProgress UpdateProgress1;
 
         /// <summary>
         /// Control UpdatePanel10.
@@ -463,6 +463,15 @@ namespace SAF.Form
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divErrorTot;
+
+        /// <summary>
+        /// Control ddlFiltroRegs.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlFiltroRegs;
 
         /// <summary>
         /// Control grvPolizas.

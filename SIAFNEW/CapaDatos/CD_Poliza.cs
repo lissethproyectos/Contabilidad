@@ -252,10 +252,11 @@ namespace CapaDatos
             }
         }
 
-        public void PolizaConsultaGrid_Min(ref Poliza ObjPoliza, String FechaInicial, String FechaFinal, String Buscar, String TipoUsu, ref List<Poliza> List)
+        public void PolizaConsultaGrid_Min(ref Poliza ObjPoliza, String FechaInicial, String FechaFinal, String Buscar, String TipoUsu, ref List<Poliza> List, ref List<Poliza> List2)
         {
             CD_Datos CDDatos = new CD_Datos();
             OracleCommand cmm = null;
+            int cont = 0;
             try
             {
                 OracleDataReader dr = null;
@@ -270,7 +271,7 @@ namespace CapaDatos
                 while (dr.Read())
                 {
 
-
+                    cont=cont+1;
                     ObjPoliza = new Poliza();
                     ObjPoliza.IdPoliza = Convert.ToInt32(dr.GetValue(0));
                     ObjPoliza.Numero_poliza = Convert.ToString(dr.GetValue(1));
@@ -416,7 +417,10 @@ namespace CapaDatos
 
 
                     ObjPoliza.Validar_Total_CFDI = (Convert.ToString(dr.GetValue(21)) == "S") ? true : false;
-                    List.Add(ObjPoliza);
+                    if(cont<=2500)
+                        List.Add(ObjPoliza);
+                    else
+                        List2.Add(ObjPoliza);
                 }
                 //}
                 //else
