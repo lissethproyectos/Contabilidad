@@ -1382,7 +1382,7 @@
                                         </div>
 
 
-                                        <div class="row">
+                                        <%--<div class="row">
                                             <div class="col text-center">
                                                 <asp:UpdateProgress ID="updPgrPolizaCFDI" runat="server"
                                                     AssociatedUpdatePanelID="updPnlPolizaCFDI">
@@ -1393,7 +1393,7 @@
                                                     </ProgressTemplate>
                                                 </asp:UpdateProgress>
                                             </div>
-                                        </div>
+                                        </div>--%>
 
 
                                         <div class="row">
@@ -1415,7 +1415,7 @@
                                                                             <div class="col-md-9">
                                                                                 <asp:UpdatePanel ID="updPnlPartPolizas" runat="server">
                                                                                     <ContentTemplate>
-                                                                                        <asp:DropDownList ID="ddlPartidasPoliza" runat="server" CssClass="form-control_min">
+                                                                                        <asp:DropDownList ID="ddlPartidasPoliza" runat="server" CssClass="form-control_min" Width="200px">
                                                                                             <asp:ListItem Value="0">Sin Partidas</asp:ListItem>
                                                                                         </asp:DropDownList>
                                                                                     </ContentTemplate>
@@ -1746,6 +1746,7 @@
                                                         </Triggers>
                                                     </asp:UpdatePanel>
                                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator19" runat="server" ControlToValidate="FileOficio" ErrorMessage="*Archivo" Text="* Requerido" ValidationGroup="GuardarOficio"></asp:RequiredFieldValidator>
+                                                    <asp:RegularExpressionValidator ID="reqOficioPdf" runat="server" ControlToValidate="FileOficio" ErrorMessage="Archivo incorrecto, debe ser un PDF" ValidationExpression="(.*?)\.(pdf|PDF|Pdf)$" ValidationGroup="GuardarOficio"></asp:RegularExpressionValidator>
                                                 </div>
                                                 <div class="col-md-2">
                                                     <asp:Button ID="bttnAgregarOficio" runat="server" Text="Agregar" CssClass="btn btn-grey" OnClick="bttnAgregarOficio_Click" ValidationGroup="GuardarOficio" />

@@ -1797,15 +1797,6 @@ namespace SAF.Form
         protected global::System.Web.UI.WebControls.Label lblErrorCFDI;
 
         /// <summary>
-        /// Control updPgrPolizaCFDI.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.UpdateProgress updPgrPolizaCFDI;
-
-        /// <summary>
         /// Control updPnlPolizaCFDI.
         /// </summary>
         /// <remarks>
@@ -2281,6 +2272,15 @@ namespace SAF.Form
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator19;
+
+        /// <summary>
+        /// Control reqOficioPdf.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator reqOficioPdf;
 
         /// <summary>
         /// Control bttnAgregarOficio.

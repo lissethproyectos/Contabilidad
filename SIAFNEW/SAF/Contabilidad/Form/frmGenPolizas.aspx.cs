@@ -49,6 +49,8 @@ namespace SAF.Contabilidad.Form
         private void Inicializar()
         {
             CargarGrid();
+
+            //Se va a validar monto en partidas 1
         }
         protected void linkBttnGenPolizas_Click(object sender, EventArgs e)
         {
@@ -98,6 +100,8 @@ namespace SAF.Contabilidad.Form
                 grvPolizas.DataSource = dt;
                 grvPolizas.DataSource = GetList();
                 grvPolizas.DataBind();
+                if(grvPolizas.Rows.Count>1)
+
             }
             catch (Exception ex)
             {

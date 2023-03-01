@@ -89,6 +89,7 @@ namespace SAF.Form
             ScriptManager.RegisterStartupScript(this, GetType(), "GridCFDIS", "PolizaCFDI();", true);
 
 
+
         }
 
 
@@ -287,6 +288,9 @@ namespace SAF.Form
                     TotalPagos = 0;
                     lblGranTotalInt.Text = Convert.ToString(TotalPagos);
                     lblGranTotal.Text = Convert.ToString(TotalPagos.ToString("C"));
+
+                    lblGranTotalPartInt.Text = Convert.ToString(TotalPagos);
+                    lblGranTotalPart.Text = Convert.ToString(TotalPagos.ToString("C"));
                 }
 
 
@@ -2008,8 +2012,12 @@ namespace SAF.Form
                     total_5131 = Convert.ToDouble(hddnTotCheque.Value);
                     total_5131 = total_5131 - 10;
 
-                    if (lblTotPartInt < lblTotInt)
-                        ScriptManager.RegisterStartupScript(this, this.GetType(), UniqueID, "mostrar_modal(0, 'El total de la(s) partida(s) es menor al total de los cfdis, favor de verificar.');", true);
+                    if (lblTotInt < lblTotPartInt)
+                    {
+                        ScriptManager.RegisterStartupScript(this, this.GetType(), UniqueID, "mostrar_modal(0, 'El total de cfdi(s) es menor al total de la(s) partida(s), favor de verificar.');", true);
+
+                        //ScriptManager.RegisterStartupScript(this, this.GetType(), UniqueID, "mostrar_modal(0, 'El total de la(s) partida(s) es menor al total de los cfdis, favor de verificar.');", true);
+                    }
                     else
                     {
 
@@ -2028,6 +2036,7 @@ namespace SAF.Form
 
                             ObjPolizaCFDI.IdPoliza = Convert.ToInt32(grvPolizas.SelectedRow.Cells[0].Text);
                             CNPolizaCFDI.PolizaCFDIPartidaEditar(ObjPolizaCFDI, lstPolizasCFDI, ref Verificador);
+
                             //CNPolizaCFDI.PolizaCFDIInsertar(ObjPolizaCFDI, lstPolizasCFDI, ref Verificador);
 
                             if (Verificador == "0")
@@ -2986,7 +2995,7 @@ namespace SAF.Form
             txtImpPartida.Text = string.Empty;
             Session["Partidas"] = null;
 
-            List <Poliza_CFDI> lstPolizasCfdi = new List<Poliza_CFDI>();
+            List<Poliza_CFDI> lstPolizasCfdi = new List<Poliza_CFDI>();
             try
             {
                 CNComun.LlenaCombo("PKG_Contabilidad.Obt_Combo_Poliza_Partidas", ref ddlCatPartidas, "P_ID_POLIZA", Convert.ToString(grvPolizas.SelectedRow.Cells[0].Text), ref ListPartidas);
@@ -3212,7 +3221,7 @@ namespace SAF.Form
         {
             List<Poliza_CFDI> lstPolizasCFDI = new List<Poliza_CFDI>();
             ICollection<Poliza_Partida> lstGPartidas;//= new List<Poliza_Partida>();
-            List<Poliza_Partida> lstPartidas=new List<Poliza_Partida>();
+            List<Poliza_Partida> lstPartidas = new List<Poliza_Partida>();
             lstPolizasCFDI = (List<Poliza_CFDI>)Session["PolizasCFDI"];
             int fila = e.RowIndex;
             double totPartidas = 0;
@@ -3269,7 +3278,7 @@ namespace SAF.Form
                     txtImpPartida.Text = lstPartidas[ddlCatPartidas.SelectedIndex].EtiquetaDos.ToString();
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Verificador = ex.Message;
                 CNComun.VerificaTextoMensajeError(ref Verificador);
