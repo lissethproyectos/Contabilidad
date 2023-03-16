@@ -1993,9 +1993,12 @@ namespace SAF.Form
             Verificador = string.Empty;
             Verificador2 = string.Empty;
             List<Poliza_CFDI> lstPolizasCFDI = new List<Poliza_CFDI>();
+            List<Comun> lstCatPartidas = new List<Comun>();
+
             Poliza objPolizas = new Poliza();
             double total = 0;
             double total_5131 = 0;
+            double totPartidas = 0;
             try
             {
                 if (grvPolizaCFDI.Rows.Count >= 1)
@@ -2012,32 +2015,53 @@ namespace SAF.Form
                     total_5131 = Convert.ToDouble(hddnTotCheque.Value);
                     total_5131 = total_5131 - 10;
 
-                    if (lblTotInt < lblTotPartInt)
-                    {
-                        ScriptManager.RegisterStartupScript(this, this.GetType(), UniqueID, "mostrar_modal(0, 'El total de cfdi(s) es menor al total de la(s) partida(s), favor de verificar.');", true);
 
-                        //ScriptManager.RegisterStartupScript(this, this.GetType(), UniqueID, "mostrar_modal(0, 'El total de la(s) partida(s) es menor al total de los cfdis, favor de verificar.');", true);
+                    if (Session["PolizasCFDI"] != null)
+                        lstPolizasCFDI = (List<Poliza_CFDI>)Session["PolizasCFDI"];
+
+
+                    if (Session["CatPartidas"] != null)
+                        lstCatPartidas = (List<Comun>)Session["CatPartidas"];
+
+                    Verificador = string.Empty;
+                    foreach (var lstCatalogoPartidas in lstCatPartidas)
+
+                    {
+                        //string cve_partida = lstCatalogoPartidas.IdStr;
+                        //double SumTotalPartidas = lstPolizasCFDI.Sum(item => Convert.ToDouble(item.GrupoPartidas.Where(c => c.Partida == cve_partida).Sum(item2 => Convert.ToDouble(item2.Importe_Partida))));
+
+
+                        //if (SumTotalPartidas <  Convert.ToDouble(lstCatalogoPartidas.EtiquetaDos))
+                        //    Verificador = Verificador + "El total de la partida " + lstCatalogoPartidas.IdStr + "($" + SumTotalPartidas + ") es menor al total de la partida en  la cédula $" + lstCatalogoPartidas.EtiquetaDos + "</br>";
+                        //else if (SumTotalPartidas > Convert.ToDouble(lstCatalogoPartidas.EtiquetaDos))
+                        //    Verificador = Verificador + "El total de la partida " + lstCatalogoPartidas.IdStr + "($" + SumTotalPartidas + ") es mayor al total de la partida en  la cédula $" + lstCatalogoPartidas.EtiquetaDos + "</br>";
+
+                        string cve_partida = lstCatalogoPartidas.IdStr;
+                        decimal SumTotalPartidas = lstPolizasCFDI.Sum(item => Convert.ToDecimal(item.GrupoPartidas.Where(c => c.Partida == cve_partida).Sum(item2 => Convert.ToDecimal(item2.Importe_Partida))));
+
+
+                        if (SumTotalPartidas < Convert.ToDecimal(lstCatalogoPartidas.EtiquetaDos))
+                            Verificador = Verificador + "El total de la partida " + lstCatalogoPartidas.IdStr + "($" + SumTotalPartidas + ") es menor al total de la partida en  la cédula $" + lstCatalogoPartidas.EtiquetaDos + "</br>";
+                        else if (SumTotalPartidas > Convert.ToDecimal(lstCatalogoPartidas.EtiquetaDos))
+                            Verificador = Verificador + "El total de la partida " + lstCatalogoPartidas.IdStr + "($" + SumTotalPartidas + ") es mayor al total de la partida en  la cédula $" + lstCatalogoPartidas.EtiquetaDos + "</br>";
+
+
                     }
+
+
+                    if (objPolizas.ValidaTotal == "S" && (grvPolizas.SelectedRow.Cells[4].Text == "Egreso" || grvPolizas.SelectedRow.Cells[4].Text == "Diario") && (lblTotInt < total_5131) && grvPolizas.SelectedRow.Cells[21].Text.ToUpper() == "FALSE")
+                        ScriptManager.RegisterStartupScript(this, this.GetType(), UniqueID, "mostrar_modal(0, 'El total de los CFDI´s es menor al total del cheque, favor de verificar.');", true);
+                    else if (objPolizas.ValidaTotal == "N" && (grvPolizas.SelectedRow.Cells[4].Text == "Egreso" || grvPolizas.SelectedRow.Cells[4].Text == "Diario") && (lblTotInt < total) && grvPolizas.SelectedRow.Cells[21].Text.ToUpper() == "FALSE")
+                        ScriptManager.RegisterStartupScript(this, this.GetType(), UniqueID, "mostrar_modal(0, 'El total de los CFDI´s es menor al total del cheque, favor de verificar.');", true);
                     else
                     {
-
-                        if (objPolizas.ValidaTotal == "S" && (grvPolizas.SelectedRow.Cells[4].Text == "Egreso" || grvPolizas.SelectedRow.Cells[4].Text == "Diario") && (lblTotInt < total_5131) && grvPolizas.SelectedRow.Cells[21].Text.ToUpper() == "FALSE")
-                            ScriptManager.RegisterStartupScript(this, this.GetType(), UniqueID, "mostrar_modal(0, 'El total de los CFDI´s es menor al total del cheque, favor de verificar.');", true);
-
-                        else if (objPolizas.ValidaTotal == "N" && (grvPolizas.SelectedRow.Cells[4].Text == "Egreso" || grvPolizas.SelectedRow.Cells[4].Text == "Diario") && (lblTotInt < total) && grvPolizas.SelectedRow.Cells[21].Text.ToUpper() == "FALSE")
-                            ScriptManager.RegisterStartupScript(this, this.GetType(), UniqueID, "mostrar_modal(0, 'El total de los CFDI´s es menor al total del cheque, favor de verificar.');", true);
-
+                        if (Verificador != string.Empty)//lblTotInt < lblTotPartInt)                        
+                            ScriptManager.RegisterStartupScript(this, this.GetType(), UniqueID, "mostrar_modal(0, '" + Verificador + "');", true);
                         else
                         {
 
-                            if (Session["PolizasCFDI"] != null)
-                                lstPolizasCFDI = (List<Poliza_CFDI>)Session["PolizasCFDI"];
-
-
                             ObjPolizaCFDI.IdPoliza = Convert.ToInt32(grvPolizas.SelectedRow.Cells[0].Text);
                             CNPolizaCFDI.PolizaCFDIPartidaEditar(ObjPolizaCFDI, lstPolizasCFDI, ref Verificador);
-
-                            //CNPolizaCFDI.PolizaCFDIInsertar(ObjPolizaCFDI, lstPolizasCFDI, ref Verificador);
 
                             if (Verificador == "0")
                             {
@@ -2058,9 +2082,9 @@ namespace SAF.Form
                                 ScriptManager.RegisterStartupScript(this, this.GetType(), UniqueID, "mostrar_modal(0, '" + Verificador + " " + Verificador2 + "');", true);
 
                             }
-
                         }
                     }
+
                 }
                 else
                 {
@@ -2994,7 +3018,7 @@ namespace SAF.Form
             grvPolizaCFDI.SelectedIndex = row.RowIndex;
             txtImpPartida.Text = string.Empty;
             Session["Partidas"] = null;
-
+            lblErrorAgPart.Text = string.Empty;
             List<Poliza_CFDI> lstPolizasCfdi = new List<Poliza_CFDI>();
             try
             {
@@ -3102,53 +3126,59 @@ namespace SAF.Form
             Verificador = string.Empty;
             Poliza_CFDI objPoliza = new Poliza_CFDI();
             Poliza_CFDI objPolizaCfdi = new Poliza_CFDI();
+            Poliza_CFDI objPoliza_Partida = new Poliza_CFDI();
             List<Poliza_Partida> lstPartidas = new List<Poliza_Partida>();
             List<Poliza_CFDI> lstPolizasCfdi = new List<Poliza_CFDI>();
             List<Poliza_CFDI> lstPolizasCfdi2 = new List<Poliza_CFDI>();
+            List<Comun> lstImpPartidas = new List<Comun>();
             double totPartidas = 0;
-            //Poliza_Partida objPartida;//; = new Poliza_Partida();
-            Poliza_CFDI objPoliza_Partida = new Poliza_CFDI();
+            lblErrorAgPart.Text = string.Empty;
+
+
             try
             {
+                if (Session["CatPartidas"] != null)
+                {
+                    lstImpPartidas = (List<Comun>)Session["CatPartidas"];
 
-                //if (Session["PolizasCFDI"] != null)
-                //    lstPolizasCfdi = (List<Poliza_CFDI>)Session["PolizasCFDI"];
+                    //totPartidas = Convert.ToDouble(lstImpPartidas[ddlCatPartidas.SelectedIndex].EtiquetaDos.ToString());
 
-                if (Session["Partidas"] != null)
-                    lstPartidas = (List<Poliza_Partida>)Session["Partidas"];
-
-                string Partida = ddlCatPartidas.SelectedValue;
-                double Importe_Partida = Convert.ToDouble(txtImpPartida.Text);
-                string Partida_Descripcion = ddlCatPartidas.SelectedItem.Text;
-                Poliza_Partida objPartida = new Poliza_Partida(Partida, Partida_Descripcion, Importe_Partida);
-                lstPartidas.Add(objPartida);
+                    if (Session["Partidas"] != null)
+                        lstPartidas = (List<Poliza_Partida>)Session["Partidas"];
 
 
-                grdPartidas.DataSource = lstPartidas;// lstPolizasCfdi[grvPolizaCFDI.SelectedRow.RowIndex].GrupoPartidas;
-                grdPartidas.DataBind();
-                Session["Partidas"] = lstPartidas;
+                    totPartidas = lstPartidas.Where(x => x.Partida == ddlCatPartidas.SelectedValue).Sum(x => x.Importe_Partida);
+                    totPartidas = Convert.ToDouble(totPartidas) + Convert.ToDouble(lstImpPartidas[ddlCatPartidas.SelectedIndex].EtiquetaDos.ToString());
 
-                //lstPolizasCfdi[grvPolizaCFDI.SelectedRow.RowIndex].GrupoPartidas.Add(objPartida);
-                //Session["PolizasCFDI"] = lstPolizasCfdi;
+                    //totPartidas = Convert.ToDouble(lstImpPartidas[ddlCatPartidas.SelectedIndex].EtiquetaDos.ToString());
+
+                    //SumTotalPartidas = lstPolizasCfdi.Sum(item => Convert.ToDouble(item.GrupoPartidas.Sum(item2 => Convert.ToDouble(item2.Importe_Partida))));
 
 
 
-                //DropDownList ddlPartidasPoliza = (DropDownList)(grvPolizaCFDI.SelectedRow.Cells[2].FindControl("ddlPartidasPoliza"));
+                    if (Convert.ToDouble(txtImpPartida.Text) > totPartidas)
+                        lblErrorAgPart.Text = "El importe debe ser menor o igual al de la PARTIDA PRESUPUESTAL.";
+                    else
+                    {
 
 
-                //ddlPartidasPoliza.DataSource = lstPolizasCfdi[grvPolizaCFDI.SelectedRow.RowIndex].GrupoPartidas;
-                //ddlPartidasPoliza.DataValueField = "Partida";
-                //ddlPartidasPoliza.DataTextField = "Partida_Descripcion";
-                //ddlPartidasPoliza.DataBind();
-
-                //Label lblTotPartidas = grvPolizaCFDI.SelectedRow.Cells[3].FindControl("lblTotPartidas") as Label;
-                //totPartidas = lstPolizasCfdi[grvPolizaCFDI.SelectedRow.RowIndex].GrupoPartidas.Sum(item => Convert.ToDouble(item.Importe_Partida));
-                //lblTotPartidas.Text = string.Format("{0:c}", Convert.ToString(totPartidas));
-
-                //grdPartidas.DataSource = lstPolizasCfdi[grvPolizaCFDI.SelectedRow.RowIndex].GrupoPartidas;
-                //grdPartidas.DataBind();
 
 
+
+                        string Partida = ddlCatPartidas.SelectedValue;
+                        double Importe_Partida = Convert.ToDouble(txtImpPartida.Text);
+                        string Partida_Descripcion = ddlCatPartidas.SelectedItem.Text;
+                        Poliza_Partida objPartida = new Poliza_Partida(Partida, Partida_Descripcion, Importe_Partida);
+                        lstPartidas.Add(objPartida);
+
+
+                        grdPartidas.DataSource = lstPartidas;// lstPolizasCfdi[grvPolizaCFDI.SelectedRow.RowIndex].GrupoPartidas;
+                        grdPartidas.DataBind();
+                        Session["Partidas"] = lstPartidas;
+                    }
+                }
+                else
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), UniqueID, "mostrar_modal(0, 'No se pudo recuperar importe de partida, favor de verificar.');", true);
 
 
             }
@@ -3166,6 +3196,7 @@ namespace SAF.Form
             double totPartidas = 0;
             double TotalPagos;
             double SumTotalPartidas;
+            double TotalPartidas;
             List<Poliza_Partida> lstPartidas = new List<Poliza_Partida>();
             List<Poliza_CFDI> lstPolizasCfdi = new List<Poliza_CFDI>();
             try
@@ -3176,6 +3207,10 @@ namespace SAF.Form
 
                     if (Session["PolizasCFDI"] != null)
                         lstPolizasCfdi = (List<Poliza_CFDI>)Session["PolizasCFDI"];
+
+
+                    //TotalPagos = lstPolizasCfdi.Sum(item => Convert.ToDouble(item.CFDI_Total));
+                    //TotalPartidas = lstPolizasCfdi.Sum(item => Convert.ToDouble(item.GrupoPartidas.Sum(item2 => Convert.ToDouble(item2.Importe_Partida))));
 
                     lstPolizasCfdi[grvPolizaCFDI.SelectedRow.RowIndex].GrupoPartidas = lstPartidas;
                     Session["PolizasCFDI"] = lstPolizasCfdi;

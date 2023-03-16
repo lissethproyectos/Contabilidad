@@ -26,6 +26,13 @@ namespace CapaEntidad
             set { _Id_CFDI = value; }
         }
 
+        private int _Id_Oficio;
+        public int Id_Oficio
+        {
+            get { return _Id_Oficio; }
+            set { _Id_Oficio = value; }
+        }
+
         private string _Ejercicio;
         public string Ejercicio
         {

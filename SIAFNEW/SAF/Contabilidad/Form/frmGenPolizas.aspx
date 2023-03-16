@@ -58,6 +58,18 @@
         </div>
         <div class="row">
             <div class="col text-center">
+                <asp:UpdateProgress ID="updPgrTipo" runat="server"
+                    AssociatedUpdatePanelID="updPnlTipo">
+                    <ProgressTemplate>
+                        <span>
+                            <img height="40px" src="https://sysweb.unach.mx/SIAF-Contabilidad/images/ajax_loader_gray_512.gif"/>
+                        </span>
+                    </ProgressTemplate>
+                </asp:UpdateProgress>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-center">
                 <asp:UpdateProgress ID="updPgrMes" runat="server"
                     AssociatedUpdatePanelID="updPnlMes">
                     <ProgressTemplate>

@@ -214,7 +214,8 @@ namespace CapaDatos
                 if (Tipo == "01")
                     Cmd = CDDatos.GenerarOracleCommand("GNR_POLIZAS_INGRESOS", ref Verificador, Parametros, Valores, ParametrosOut);
                 else
-                    Cmd = CDDatos.GenerarOracleCommand("GNR_POLIZAS_RENDIMIENTOS", ref Verificador, Parametros, Valores, ParametrosOut);
+                    Cmd = CDDatos.GenerarOracleCommand("GNR" +
+                        "_POLIZAS_RENDIMIENTOS", ref Verificador, Parametros, Valores, ParametrosOut);
                 
             }
             catch (Exception ex)

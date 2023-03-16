@@ -14,19 +14,7 @@ namespace SAF.Contabilidad.Form
     public partial class frmGenPolizas : System.Web.UI.Page
     {
 
-        //Pruebas lis
-        //edito lis gomezl
-        //respuesta lis
-
-
-        //ultimo y nos vamos
-        //bueno uno más y ya
-        //a comer
-        //por fin, al fin 6:47
-        //otro cambio, 6:49
-//cambio desde a pagina web 6:51
-//Cambio 6:54
-//Cambio 6:58
+       //Cambios lis 16
         #region <Variables>
         Int32[] Celdas = new Int32[] { 0, 15, 16, 17, 18, 19, 20 };
         string Verificador = string.Empty;
@@ -100,7 +88,7 @@ namespace SAF.Contabilidad.Form
                 grvPolizas.DataSource = dt;
                 grvPolizas.DataSource = GetList();
                 grvPolizas.DataBind();
-                if(grvPolizas.Rows.Count>1)
+                //if(grvPolizas.Rows.Count>1)
 
             }
             catch (Exception ex)

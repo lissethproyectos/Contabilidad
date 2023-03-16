@@ -279,15 +279,15 @@
                                     </asp:UpdatePanel>
                                 </div>
                                 <div class="col-md-1">
-                                   <asp:UpdateProgress ID="updPgrTipo" runat="server"
-                                    AssociatedUpdatePanelID="updPnlTipo">
-                                    <ProgressTemplate>
-                                        <asp:Image ID="imgTipo" runat="server"
-                                            AlternateText="Espere un momento, por favor.." Height="30px"
-                                            ImageUrl="~/images/ajax_loader_gray_512.gif"
-                                            ToolTip="Espere un momento, por favor.." Width="30px" />
-                                    </ProgressTemplate>
-                                </asp:UpdateProgress>
+                                    <asp:UpdateProgress ID="updPgrTipo" runat="server"
+                                        AssociatedUpdatePanelID="updPnlTipo">
+                                        <ProgressTemplate>
+                                            <asp:Image ID="imgTipo" runat="server"
+                                                AlternateText="Espere un momento, por favor.." Height="30px"
+                                                ImageUrl="~/images/ajax_loader_gray_512.gif"
+                                                ToolTip="Espere un momento, por favor.." Width="30px" />
+                                        </ProgressTemplate>
+                                    </asp:UpdateProgress>
                                 </div>
                                 <div class="col-md-2">
                                     <asp:Label ID="lblStatus0" runat="server" Text="Status" Visible="False"></asp:Label>
@@ -1321,7 +1321,7 @@
                                                 <div class="col">
                                                     <asp:ValidationSummary ID="valDatosoficio" runat="server" ValidationGroup="CFDI" ShowMessageBox="False" HeaderText="Estos datos son requeridos, favor de verificar" />
                                                 </div>
-                                            </div>                                            
+                                            </div>
                                         </div>
                                         <div class="row" id="divFacturas" runat="server">
                                             <div class="col-md-5">
@@ -2039,6 +2039,15 @@
                                     <asp:LinkButton ID="linkBttnAgregarPart" runat="server" CssClass="btn btn-grey" OnClick="linkBttnAgregarPart_Click">Agregar</asp:LinkButton>
                                 </ContentTemplate>
                             </asp:UpdatePanel>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                             <asp:UpdatePanel ID="updPnlErrorAgPart" runat="server">
+                                <ContentTemplate>
+                            <asp:Label ID="lblErrorAgPart" runat="server" Text="" CssClass="text-danger"></asp:Label>
+                                    </ContentTemplate>
+                                 </asp:UpdatePanel>
                         </div>
                     </div>
                     <div class="row">
