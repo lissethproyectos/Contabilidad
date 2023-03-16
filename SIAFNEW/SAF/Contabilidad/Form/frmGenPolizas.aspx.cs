@@ -15,6 +15,7 @@ namespace SAF.Contabilidad.Form
     {
 
        //Cambios lis 16
+       //nada
         #region <Variables>
         Int32[] Celdas = new Int32[] { 0, 15, 16, 17, 18, 19, 20 };
         string Verificador = string.Empty;
